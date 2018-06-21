@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Acrobatics",
+    "untrained": true,
+    "armorPenalty": true,
+    "ability": "dexterity"
+  },
+  {
+    "name": "Appraise",
+    "untrained": true,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Bluff",
+    "untrained": true,
+    "armorPenalty": false,
+    "ability": "charisma"
+  },
+  {
+    "name": "Climb",
+    "untrained": true,
+    "armorPenalty": true,
+    "ability": "strength"
+  },
+  {
+    "name": "Craft",
+    "untrained": true,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Diplomacy",
+    "untrained": true,
+    "armorPenalty": false,
+    "ability": "charisma"
+  },
+  {
+    "name": "Disable Device",
+    "untrained": false,
+    "armorPenalty": true,
+    "ability": "dexterity"
+  },
+  {
+    "name": "Disguise",
+    "untrained": true,
+    "armorPenalty": false,
+    "ability": "charisma"
+  },
+  {
+    "name": "Escape Artist",
+    "untrained": true,
+    "armorPenalty": true,
+    "ability": "dexterity"
+  },
+  {
+    "name": "Fly",
+    "untrained": true,
+    "armorPenalty": true,
+    "ability": "dexterity"
+  },
+  {
+    "name": "Handle Animal",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "charisma"
+  },
+  {
+    "name": "Heal",
+    "untrained": true,
+    "armorPenalty": false,
+    "ability": "wisdom"
+  },
+  {
+    "name": "Intimidate",
+    "untrained": true,
+    "armorPenalty": false,
+    "ability": "charisma"
+  },
+  {
+    "name": "Knowledge (arcana)",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Knowledge (dungeoneering)",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Knowledge (engineering)",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Knowledge (geography)",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Knowledge (history)",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Knowledge (local)",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Knowledge (nature)",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Knowledge (nobility)",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Knowledge (planes)",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Knowledge (religion)",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Linguistics",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Perception",
+    "untrained": true,
+    "armorPenalty": false,
+    "ability": "wisdom"
+  },
+  {
+    "name": "Perform",
+    "untrained": true,
+    "armorPenalty": false,
+    "ability": "charisma"
+  },
+  {
+    "name": "Profession",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "wisdom"
+  },
+  {
+    "name": "Ride",
+    "untrained": true,
+    "armorPenalty": true,
+    "ability": "dexterity"
+  },
+  {
+    "name": "Sense Motive",
+    "untrained": true,
+    "armorPenalty": false,
+    "ability": "wisdom"
+  },
+  {
+    "name": "Sleight of Hand",
+    "untrained": false,
+    "armorPenalty": true,
+    "ability": "dexterity"
+  },
+  {
+    "name": "Spellcraft",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "intelligence"
+  },
+  {
+    "name": "Stealth",
+    "untrained": true,
+    "armorPenalty": true,
+    "ability": "dexterity"
+  },
+  {
+    "name": "Survival",
+    "untrained": true,
+    "armorPenalty": false,
+    "ability": "wisdom"
+  },
+  {
+    "name": "Swim",
+    "untrained": true,
+    "armorPenalty": true,
+    "ability": "strength"
+  },
+  {
+    "name": "Use Magic Device",
+    "untrained": false,
+    "armorPenalty": false,
+    "ability": "charisma"
+  }
+]

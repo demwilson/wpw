@@ -1,0 +1,243 @@
+[
+  {
+    "name": "Aboleth",
+    "text": "<b>Spoken By:</b> Aboleth and other deep sea (aquatic) aberrations.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Abyssal",
+    "text": "<b>Spoken By:</b> Demons and other chaotic evil outsiders<br><br>The language of demons, Abyssal is often spoken by evil spirits.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Aklo",
+    "text": "<b>Spoken By:</b> Derro, inhuman or otherworldly monsters, evil fey.<br><br>This ancient tongue is spoken by strange eldritch entities, and certain ancient beings.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Aquan",
+    "flavor": "Tongue of the Sea",
+    "text": "<b>Spoken By:</b> Aquatic and water-based creatures<br><br>The so-called \"tongue of the sea\" is spoken primarily in the sunken nation of the locathahs— those who trade frequently with the ocean empires often speak this tongue as well.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Auran",
+    "flavor": "Tongue of the Heavens",
+    "text": "<b>Spoken By:</b> Spoken By: Flying creatures, air-based creatures<br><br>A soft-spoken, breathy language, also known as the \"tongue of the heavens.\"",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Boggard",
+    "text": "<b>Spoken By:</b> Boggards.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Celestial",
+    "text": "<b>Spoken By:</b> Angels and other good outsiders.<br><br>The language of angels.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Common",
+    "text": "<b>Spoken By:</b> humans and the other core races",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Cyclops",
+    "text": "<b>Spoken By:</b> Cyclops and their kin.<br><br>Once the ancient language of the giants, this tongue was created before the rise of humanity by the cyclopes.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Dark Folk",
+    "text": "<b>Spoken By:</b> Dark creepers, dark slayers, and dark stalkers (creatures of the Dark Folk subtype.)",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Draconic",
+    "text": "<b>Spoken By:</b> dragons, reptilian humanoids",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Drow Sign Language",
+    "text": "<b>Spoken By:</b> Drow.<br><br>Like Druidic, drow sign language is a \"secret\" language.",
+    "tags": [
+      "secret"
+    ]
+  },
+  {
+    "name": "Druidic",
+    "text": "<b>Spoken By:</b> Druids (only)<br><br>Druidic is a secret language known only to druids. It is a free language for a druid; that is, it doesn't take up a language slot. Druids are forbidden to teach this language to nondruids and has its own alphabet.",
+    "tags": [
+      "secret"
+    ]
+  },
+  {
+    "name": "Dwarven",
+    "text": "<b>Spoken By:</b> Dwarves.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "D’ziriak",
+    "text": "<b>Spoken By:</b> D'ziriak.<br><br>The insectoid d'ziriak language consists of buzzes and chitters. It is an obscure one known by few outside their race.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Elven",
+    "text": "<b>Spoken By:</b> Elves, half-elves",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Giant",
+    "text": "<b>Spoken By:</b> Cyclops, ettins, giants, ogres, trolls<br><br>This brutish tongue and its numerous minor variants are spoken in any region where the wrath of giants is known.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Gnoll",
+    "text": "<b>Spoken By:</b> Gnolls",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Gnome",
+    "text": "<b>Spoken By:</b> Gnomes",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Goblin",
+    "text": "<b>Spoken By:</b> Bugbears, goblins, hobgoblins<br><br>The official language of hobgoblins, this dialect is similar to the goblin tongue.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Grippli",
+    "text": "<b>Spoken By:</b> Grippli",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Halfling",
+    "text": "<b>Spoken By:</b> Halflings",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Ignan",
+    "flavor": "Tongue of Fire",
+    "text": "<b>Spoken By:</b> Fire-based creatures<br><br>Also called the \"tongue of fire.\"",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Infernal",
+    "text": "<b>Spoken By:</b> Devils and other lawful evil outsiders<br><br>The language of devils is often spoken by evil spirits.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Necril",
+    "text": "<b>Spoken By:</b> undead<br><br>An ancient language of the dead, this whispering tongue is shared among undead and is also often associated with necromancy.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Orc",
+    "text": "<b>Spoken By:</b> Orcs, half-orcs",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Protean",
+    "text": "<b>Spoken By:</b> Proteans.<br><br>Like the proteans chaotic nature, the protean language itself is mutable, evolving so quickly that few outsiders can understand it without magical aid.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Sphinx",
+    "text": "<b>Spoken By:</b> Sphinxes",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Sylvan",
+    "text": "<b>Spoken By:</b> Centaurs, fey creatures, plant creatures, unicorns.<br><br>The language of the fey.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Tengu",
+    "text": "<b>Spoken By:</b> Tengu<br><br>The official language of the tengu race.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Terran",
+    "text": "<b>Spoken By:</b> Earth-based creatures.<br><br>Also called the \"tongue of earth.\"",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Treant",
+    "text": "<b>Spoken By:</b> Treants.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Undercommon",
+    "text": "<b>Spoken By:</b> Drow, duergar, morlocks, svirfneblin.<br><br>This language is derived from an ancient combination of Elven and even older tongues.",
+    "tags": [
+      "basic"
+    ]
+  },
+  {
+    "name": "Vegepygmy",
+    "text": "<b>Spoken By:</b> Vegepygmies.<br><br>Vegepygmy is not a spoken language since vegepygmies cannot speak. They communicate via a crude language of rhythmic taps, beats, and clicks.",
+    "tags": [
+      "basic"
+    ]
+  }
+]

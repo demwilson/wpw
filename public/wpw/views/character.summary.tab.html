@@ -1,0 +1,169 @@
+<h2 class="row">
+    <div class="col-md-6 bold" style="text-align: center;">{{character.basics.name}}</div>
+</h2>
+<div>
+    <span ng-if="character.basics.gender">{{character.basics.gender}}</span>
+    <span ng-if="character.race">{{character.race.name}}</span>
+    <span ng-if="character.getCharacterLevel() > 0">
+        <span ng-repeat="currentClass in character.classes">{{currentClass.name | capitalize}} {{currentClass.level}}<span
+                ng-if="!$last">/</span></span>
+    </span>
+</div>
+<div>
+    <span ng-if="character.alignment">{{character.alignment | shortenAlignment}}</span>
+    <span ng-if="character.size">{{character.size | shortenSize | capitalize}}</span>
+    <span ng-if="character.creatureType">{{character.creatureType | capitalize}}</span>
+    <span ng-if="character.types.length > 0">
+        (<span ng-repeat="type in character.type">{{type | capitalize}}<span
+            ng-if="!$last">, </span></span>)
+    </span>
+</div>
+<div>
+    <span class="bold">Init</span>:&nbsp;<span>{{character.initiative.value() | plusSign}}</span>;
+    <span ng-repeat="(senseName, senseValue) in character.senses"><span class="bold" ng-if="$first">&nbsp;Senses</span>:&nbsp;{{senseName | capitalize}}<span
+            ng-repeat="(detailName, detailValue) in senseValue"> {{detailName | capitalize}}{{detailValue === true ? '' : ' '+ detailValue}}<span
+            ng-if="!$last">, </span></span><span
+            ng-if="!$last">, </span>;</span>
+    <span class="bold">&nbsp;Perception</span>:&nbsp;<span>{{character.skills.perception.value() | plusSign}}</span>
+</div>
+<div ng-if="character.collectClassesDetails('aura').length > 0">
+    <span class="bold">Auras</span>&nbsp;{{character.collectClassesDetails('aura').join(',&nbsp;')}};
+</div>
+<h5>DEFENSE</h5>
+<div>
+    <span class="bold">AC</span>&nbsp;<span>{{character.getArmorClass()}}</span>,
+    <a href="http://www.d20pfsrd.com/gamemastering/combat#TOC-Touch-Attacks">touch</a>&nbsp;<span>{{character.getArmorClass('touch')}}</span>,
+    <a href="http://www.d20pfsrd.com/gamemastering/conditions#TOC-Flat-Footed">flat-footed</a>&nbsp;<span>{{character.getArmorClass('flat-footed')}}</span>
+    (<span ng-if="character.equipment.slots.armor">{{character.equipment.slots.armor.bonus | plusSign}} <a href="http://www.d20pfsrd.com/basics-ability-scores/glossary#TOC-Bonus-Armor-">armor</a>, </span>{{character.scores.dexterity.modifier() | plusSign}}&nbsp;<a
+        href="http://www.d20pfsrd.com/basics-ability-scores/ability-scores#TOC-Dexterity-Dex-">dex</a>)
+</div>
+<div ng-if="character.getCharacterLevel() > 0">
+    <span class="bold">hp</span>&nbsp;<span>{{character.getHitPoints()}}</span>,
+    ({{character.getCharacterLevel()}}&nbsp;HD; <span ng-repeat="currentClass in character.classes">{{currentClass.level}}d{{currentClass.hitDie}}<span
+        ng-if="!$last"> + </span></span> + {{character.scores.constitution.modifier()*character.getCharacterLevel()}})
+</div>
+<div>
+    <span class="bold">Fort</span>&nbsp;<span>{{character.getSave('fortitude')| plusSign}}</span>,
+    <span class="bold">Ref</span>&nbsp;<span>{{character.getSave('reflex')| plusSign}}</span>,
+    <span class="bold">Will</span>&nbsp;<span>{{character.getSave('will')| plusSign}}</span>
+</div>
+<div>
+    <span ng-if="character.collectClassesDetails('defensive').length > 0"><span class="bold">Defensive Abilities</span>&nbsp;{{character.collectClassesDetails('defensive').join(',&nbsp;')}};</span>
+    <span ng-if="character.collectClassesDetails('dr').length > 0"><span class="bold">DR</span>&nbsp;{{character.collectClassesDetails('dr').join(',&nbsp;')}};</span>
+    <span ng-if="character.collectClassesDetails('immune').length > 0"><span class="bold">Immune</span>&nbsp;{{character.collectClassesDetails('immune').join(',&nbsp;')}};</span>
+    <span ng-if="character.collectClassesDetails('resist').length > 0"><span class="bold">Resist</span>&nbsp;{{character.collectClassesDetails('resist').join(',&nbsp;')}};</span>
+    <span ng-if="character.collectClassesDetails('sr').length > 0"><span class="bold">SR</span>&nbsp;{{character.collectClassesDetails('sr').join(',&nbsp;')}}</span>
+</div>
+<div>
+    <span ng-if="character.weaknesses.length > 0"><span class="bold">Weaknesses</span>&nbsp;{{character.weaknesses.join(',&nbsp;')}}</span>
+</div>
+<h5>OFFENSE</h5>
+<div>
+    <span ng-if="character.speed.base.value() !== 0"><span class="bold">Speed</span>&nbsp;
+        <span>{{character.speed.base.value()}} ft.</span>
+        <span ng-if="character.speed.climb.value()">,&nbsp;{{character.speed.climb.value()}} ft.</span>
+        <span ng-if="character.speed.burrow.value()">,&nbsp;{{character.speed.burrow.value()}} ft.</span>
+        <span ng-if="character.speed.fly.value()">,&nbsp;{{character.speed.fly.value()}} ft.<span>&nbsp;({{character.speed.fly.maneuverability}})</span></span>
+        <span ng-if="character.speed.swim.value()">,&nbsp;{{character.speed.swim.value()}} ft.</span>
+    </span>
+</div>
+<div>
+    <span ng-if="character.equipment.slots.hand1">
+        <span class="bold">
+            {{character.equipment.slots.hand1.hasTag('melee') === true ? 'Melee' : 'Ranged'}}
+        </span>
+        {{character.equipment.slots.hand1.name}} {{character.bonusAttack.value() | plusSign}} ({{character.equipment.slots.hand1.damage}}{{character.bonusDamage.value() | plusSign}}/{{character.equipment.slots.hand1.crit.range == '20' ? '' : character.equipment.slots.hand1.crit.range}}x{{character.equipment.slots.hand1.crit.multiplier}})
+    </span>
+</div>
+<div ng-if="character.size">
+    <span><span class="bold">Space</span>&nbsp;{{character.getSpace()}} ft.</span>;
+    <span><span class="bold">Reach</span>&nbsp;{{character.getReach()}} ft.</span>
+</div>
+<div ng-if="character.collectClassesDetails('attack').length > 0">
+    <span class="bold">Special Attacks</span>&nbsp;{{character.collectClassesDetails('attack').join(',&nbsp;')}}
+</div>
+<div ng-repeat="(className, currentClass) in character.classes">
+    <div ng-if="currentClass.spelllike">
+        <div>
+            <span class="bold">Spell-Like Abilities</span>&nbsp;
+            (CL {{MathService.eval(currentClass.spelllike["caster level"], character) | appendPlace}}; <a
+                href="http://www.d20pfsrd.com/magic#TOC-Concentration">concentration</a>&nbsp;{{character.calculateConcentration(className,
+            'spelllike') | plusSign}})
+        </div>
+        <div class="row" ng-repeat="(dataName, dataDetails) in currentClass.spelllike.data">
+            <div class="bold col-sm-2 col-md-2 col-lg-2">{{dataName}}</div>
+            <div class="col-sm-10 col-md-10 col-lg-10">{{dataDetails.join(', ')}}</div>
+        </div>
+    </div>
+    <div ng-if="currentClass.spells">
+        <div>
+            <span class="bold">{{className | capitalize}} {{currentClass.spells.text}}</span>&nbsp; (CL
+            {{MathService.eval(currentClass.spells["caster level"], character) | appendPlace}}; <a
+                href="http://www.d20pfsrd.com/magic#TOC-Concentration">concentration</a>&nbsp;{{character.calculateConcentration(className,
+            'spells') | plusSign}}; touch {{character.getAttackBonus('ranged', true) | plusSign}})
+        </div>
+        <div class="row" ng-repeat="(dataName, dataDetails) in currentClass.spells.data">
+            <div class="bold col-sm-2 col-md-2 col-lg-2">{{dataName}}</div>
+            <div class="col-sm-1 col-md-1 col-lg-1">{{character.getNumberOfSpells(dataName, dataDetails,
+                currentClass.spells)}}
+            </div>
+        </div>
+    </div>
+    <div ng-repeat="bloodline in currentClass.bloodline">
+        <span class="bold">Bloodline</span>&nbsp;{{bloodline}}<span
+            ng-if="!$last">, </span>
+    </div>
+    <div ng-repeat="mystery in currentClass.mystery">
+        <span class="bold">Bloodline</span>&nbsp;{{mystery}}<span
+            ng-if="!$last">, </span>
+    </div>
+    <div ng-repeat="patron in currentClass.patron">
+        <span class="bold">Patron</span>&nbsp;{{patron}}<span
+            ng-if="!$last">, </span>
+    </div>
+    <div ng-if="currentClass.domains">
+        <span class="bold">Domain</span>&nbsp;{{currentClass.domains.join(', ')}}<span
+            ng-if="!$last">, </span>
+    </div>
+    <div ng-if="currentClass.oppositionSchools">
+        <span class="bold">Opposition Schools</span>&nbsp;{{currentClass.oppositionSchools.join(', ')}}<span
+            ng-if="!$last">, </span>
+    </div>
+</div>
+<h5>STATISTICS</h5>
+<div>
+    <span class="bold">Str</span>&nbsp;{{character.scores.strength.value()}},
+    <span class="bold">Dex</span>&nbsp;{{character.scores.dexterity.value()}},
+    <span class="bold">Con</span>&nbsp;{{character.scores.constitution.value()}},
+    <span class="bold">Int</span>&nbsp;{{character.scores.intelligence.value()}},
+    <span class="bold">Wis</span>&nbsp;{{character.scores.wisdom.value()}},
+    <span class="bold">Cha</span>&nbsp;{{character.scores.charisma.value()}}
+</div>
+<div>
+    <span class="bold">Base Atk</span>&nbsp;{{character.getBab() | plusSign}};
+    <span class="bold">CMB</span>&nbsp;{{character.getCmb() | plusSign}};
+    <span class="bold">CMD</span>&nbsp;{{character.getCmd()}}
+</div>
+<div>
+    <span class="bold">Feats</span>
+    <span ng-repeat="feat in character.feats.data track by $index">{{feat.name}}<span ng-if="feat.selections">(<span
+            ng-repeat="selection in feat.selections track by $index">{{selection}}<span
+            ng-if="!$last">,</span></span>)</span><span ng-if="!$last">, </span>
+    </span>
+</div>
+<div>
+    <span class="bold">Skills</span>&nbsp;
+    <span ng-repeat="skillData in character.skills | onlyWithRanks">{{skillData.name}}&nbsp;{{skillData.value() | plusSign}}<span
+            ng-if="!$last">, </span></span>
+</div>
+<div>
+    <span class="bold">Languages</span>
+    <span ng-repeat="language in character.languages.data track by $index">{{language.name}}<span
+            ng-if="language.selections">(<span
+            ng-repeat="selection in language.selections track by $index">{{selection}}<span
+            ng-if="!$last">,</span></span>)</span><span ng-if="!$last">, </span>
+    </span>
+</div>
+<div ng-if="character.collectClassesDetails('quality').length > 0">
+    <span class="bold">SQ</span>&nbsp;{{character.collectClassesDetails('quality').join(',&nbsp;')}}
+</div>

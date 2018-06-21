@@ -1,0 +1,66 @@
+<section class="container" id="feats_viewOne" data-ng-controller="featsViewOneController">
+    <div data-ng-show="authentication.user._id == feat.creator._id">
+        <a href="/#!/feats/edit/{{feat._id}}">edit</a>
+        <a href="#" data-ng-click="delete()">delete</a>
+    </div>
+    <h1>
+        {{feat.name}}
+        <span style="font-size: 9px; margin-top: -10px;" data-ng-hide="!feat.requires_value">(requires value)</span>
+    </h1>
+    <div>
+        <p class="bold">Type:</p>
+        <p data-ng-bind="feat.types.join(', ')"></p>
+    </div>
+    <div class="featTable" data-ng-hide="feat.prerequisites.length == 0">
+        <p class="bold">Prerequisites:</p>
+        <table>
+            <tr>
+                <th>Text</th>
+                <th>Type</th>
+                <th>Requirement</th>
+            </tr>
+            <tr data-ng-repeat="prerequisite in feat.prerequisites">
+                <td data-ng-bind="prerequisite.text"></td>
+                <td data-ng-bind="prerequisite.type"></td>
+                <td data-ng-bind="prerequisite.requirement"></td>
+            </tr>
+        </table>
+    </div>
+    <div data-ng-hide="feat.flavor_text.length == 0">
+        <p class="bold">Flavor Text:</p>
+        <p>{{feat.flavor_text}}</p>
+    </div>
+    <div data-ng-hide="feat.benefit.length == 0">
+        <p class="bold">Benefit:</p>
+        <p>{{feat.benefit}}</p>
+    </div>
+    <div data-ng-hide="feat.normal.length == 0">
+        <p class="bold">Normal:</p>
+        <p>{{feat.normal}}</p>
+    </div>
+    <div data-ng-hide="feat.special.length == 0">
+        <p class="bold">Special:</p>
+        <p>{{feat.special}}</p>
+    </div>
+
+    <div class="featTable" data-ng-hide="feat.modifiers.length == 0">
+        <p class="bold">Modifiers:</p>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Value</th>
+                <th>Conditional</th>
+            </tr>
+            <tr data-ng-repeat="modifier in feat.modifiers">
+                <td data-ng-bind="modifier.type"></td>
+                <td data-ng-bind="modifier.value"></td>
+                <td data-ng-bind="modifier.conditional"></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <p class="bold">Source:</p>
+        <p>{{feat.source}}</p>
+    </div>
+
+</section>

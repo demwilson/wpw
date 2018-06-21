@@ -1,0 +1,88 @@
+<div>
+    <h2>
+        Character Advancement and Level-Dependent Bonuses
+    </h2>
+</div>
+<div class="col-md-6">
+    <h3>
+        Favored Class Bonus
+    </h3>
+    <div ng-hide="character.race === null">
+        <div>
+            <div class="main">
+                Current Favored Class:
+                <div class="btn-group" uib-dropdown is-open="favoredStatus.mainOpen">
+                    <button id="favored-button" type="button" class="btn btn-default" uib-dropdown-toggle>
+                        {{character.favoredClass}} <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="favored-button">
+                        <li ng-repeat="currentClass in character.classes">
+                            <a href="javascript:;" ng-click="character.updateFavoredClass(currentClass.name)">{{currentClass.name.toLowerCase()}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <table class="table table-bordered">
+                    <tr>
+                        <td class="bold">Level</td>
+                        <td class="bold">Selection</td>
+                    </tr>
+                    <tr ng-repeat="empty in counter(character.classes[character.favoredClass].level) track by $index">
+                        <td class="text-center">{{$index + 1}}</td>
+                        <td class="text-center">
+                            <div class="btn-group" uib-dropdown is-open="favoredStatus.isopen{{$index}}">
+                                <button id="favored-button-selection{{$index + 1}}" type="button" class="btn btn-default" uib-dropdown-toggle>
+                                    {{character.classes[character.favoredClass].favoredSelections[$index].text | limitCharactersDropDown}} <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="favored-button-selection{{$index + 1}}">
+                                    <li>
+                                        <a href="javascript:;" ng-click="character.updateFavoredSelections($index, {'text': '1 Hit Point','formula':{}})">1 Hit Point</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" ng-click="character.updateFavoredSelections($index, {'text': '1 Skill Point','formula':{}})">1 Skill Point</a>
+                                    </li>
+                                    <li ng-repeat="option in character.favoredOptions">
+                                        <a href="javascript:;" ng-click="character.updateFavoredSelections($parent.$index, option)">{{option.text}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div ng-show="character.race === null">
+        No race selected.
+    </div>
+</div>
+<div class="col-md-6">
+    <h3>
+        Ability Score Bonuses
+    </h3>
+    <a class="btn btn-default aew-qualities" ng-click="selectCaldb(quality)"
+       ng-repeat="quality in character.advancement.abilityScores">{{quality.name}}</a>
+    <div ng-hide="character.advancement.abilityScores.length > 0">
+        Ability Score Bonuses are only granted every 4 levels.
+    </div>
+    <div class="qualityDetails" ng-if="selectedCaldb !== null">
+        <p class="bold">
+            {{selectedCaldb.name}}
+        </p>
+        <p>
+            {{selectedCaldb.text}}
+        </p>
+        <div ng-if="selectedCaldb.choices">
+            <p><span class="bold">Total Selections: </span>{{selectedCaldb.choices}}</p>
+            <p><span
+                    class="bold">Selection{{selectedCaldb.choices > 1 ? 's' : ''}} Made: </span><span
+                    ng-repeat="selection in selectedCaldb.selections">{{selection | capitalize}}<span
+                    ng-if="!$last">, </span></span></p>
+            <div class="qualityDetails">
+                <a class="btn btn-primary" ng-click="removeSelections(selectedCaldb)">Change
+                    Selection{{selectedCaldb.choices > 1 ? 's' : ''}}</a>
+            </div>
+        </div>
+    </div>
+</div>

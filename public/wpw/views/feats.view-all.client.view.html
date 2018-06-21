@@ -1,0 +1,26 @@
+<section class="container" id="feats_list" data-ng-controller="featsViewAllController">
+    <div data-ng-hide="feats.length > 1" style="text-align: center;">
+        <img src="img/loading.gif">
+    </div>
+    <div data-ng-show="feats.length > 1">
+        <div id="searchFilter">
+            <label>Search:</label><input ng-model="searchText">
+        </div>
+        <table class="featTables">
+            <tr>
+                <th class="featName">Feat Name</th>
+                <th class="category-type">Types</th>
+                <th class="prereqs">Prerequisites</th>
+                <th class="description">Benefit</th>
+                <th class="source">Source</th>
+            </tr>
+            <tr data-ng-repeat="feat in feats | filter:searchText">
+                <td><a href="/#!/feats/view/{{feat._id}}" data-ng-bind="feat.name"></a></td>
+                <td data-ng-bind="feat.types.join(', ')"></td>
+                <td data-ng-bind="listPrerequisites(feat.prerequisites)"></td>
+                <td data-ng-bind="feat.benefit"></td>
+                <td data-ng-bind="feat.source"></td>
+            </tr>
+        </table>
+    </div>
+</section>

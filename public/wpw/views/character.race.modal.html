@@ -1,0 +1,96 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="race-modal-title">Races</h3>
+</div>
+<div class="modal-body" id="race-modal-body">
+    <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3" ng-repeat="each in json.races">
+            <a class="btn btn-default aew-width100" ng-click="selectRace($index)">{{each.name}}</a>
+        </div>
+    </div>
+    <hr ng-if="selectedRace !== null">
+    <div class="row" ng-if="selectedRace !== null">
+        <uib-accordion>
+            <!-- DESCRIPTION -->
+            <div uib-accordion-group class="panel-default"
+                 is-open="descriptions.isOpen" ng-init="descriptions = json.races[selectedRace].descriptions">
+                <uib-accordion-heading>
+                    Description
+                    <i class="pull-right glyphicon"
+                       ng-class="{'glyphicon-chevron-down': descriptions.isOpen, 'glyphicon-chevron-right': !descriptions.isOpen}"></i>
+                </uib-accordion-heading>
+                <uib-accordion>
+                    <!-- role="button" ng-click="childToggle(desc)" -->
+                    <div uib-accordion-group class="panel-default" is-open="desc.isOpen" close-others="false"
+                         ng-repeat="desc in descriptions | orderBy: desc.position track by $index">
+                        <uib-accordion-heading>
+                            {{desc.title | capitalize}}
+                            <i class="pull-right glyphicon"
+                               ng-class="{'glyphicon-chevron-down': desc.isOpen, 'glyphicon-chevron-right': !desc.isOpen}"></i>
+                        </uib-accordion-heading>
+                        <div class="col-md-12">{{desc.text}}</div>
+                    </div>
+                </uib-accordion>
+            </div>
+            <!-- QUALITIES -->
+            <div uib-accordion-group class="panel-default"
+                 is-open="quals.isOpen" ng-init="quals = json.races[selectedRace].qualities">
+                <uib-accordion-heading>
+                    Qualities
+                    <i class="pull-right glyphicon"
+                       ng-class="{'glyphicon-chevron-down': quals.isOpen, 'glyphicon-chevron-right': !quals.isOpen}"></i>
+                </uib-accordion-heading>
+                <a class="btn aew-qualities" ng-class="isChosenQuality(each) ? 'btn-success' : 'btn-default'"
+                   ng-click="qualitySelected(each, 'quality')" tooltip-is-open="qualities[each]"
+                   tooltip-placement="right"
+                   uib-tooltip="" tooltip-trigger="click" ng-repeat="each in quals">{{each}}</a>
+                <div class="qualityDetails" ng-if="selectedQuality !== null">
+                    <div class="bold">
+                        {{json.qualities[selectedQuality].name}}
+                    </div>
+                    <div class="col-md-12">
+                        {{json.qualities[selectedQuality].text}}
+                    </div>
+                </div>
+            </div>
+            <!-- ALTERNATIVES -->
+            <div uib-accordion-group class="panel-default"
+                 is-open="alts.isOpen" ng-init="alts = json.races[selectedRace].alternatives">
+                <uib-accordion-heading>
+                    Alternative Qualities
+                    <i class="pull-right glyphicon"
+                       ng-class="{'glyphicon-chevron-down': alts.isOpen, 'glyphicon-chevron-right': !alts.isOpen}"></i>
+                </uib-accordion-heading>
+                <a class="btn aew-qualities" ng-class="isChosenQuality(each) ? 'btn-success' : 'btn-default'"
+                   ng-click="qualitySelected(each, 'alt')" tooltip-is-open="qualities[each]" tooltip-placement="right"
+                   uib-tooltip="" tooltip-trigger="click" ng-repeat="each in alts">{{each}}</a>
+                <div class="qualityDetails" ng-if="selectedAlternativeQuality !== null">
+                    <div class="bold">
+                        {{json.qualities[selectedAlternativeQuality].name}}
+                    </div>
+                    <div class="col-md-12">
+                        {{json.qualities[selectedAlternativeQuality].text}}
+                    </div>
+                    <div class="col-md-12">
+                        <span class="bold">Replaces:</span>
+                        <div class="col-lg-12">
+                            <span ng-repeat="item in json.qualities[selectedAlternativeQuality].replaces">{{item}}<span
+                                    ng-if="!$last">, </span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <a class="btn btn-success btn-sm"
+                           ng-if="!isChosenQuality(json.qualities[selectedAlternativeQuality].name)"
+                           ng-click="addQuality(json.qualities[selectedAlternativeQuality])">Select Alt Quality</a>
+                        <a class="btn btn-danger btn-sm"
+                           ng-if="isChosenQuality(json.qualities[selectedAlternativeQuality].name)"
+                           ng-click="removeQuality(json.qualities[selectedAlternativeQuality])">Remove Alt Quality</a>
+                    </div>
+                </div>
+            </div>
+        </uib-accordion>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary" type="button" ng-click="ok()" ng-class="{'disabled':selectedRace === null}">Save</button>
+</div>

@@ -1,0 +1,12 @@
+<div class="row major-section">
+    <div class="col-sm-12 col-md-3">
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="checkbox" ng-click="cardOptionsToggle('showall')"
+                       aria-label="show-all-cards">
+            </span>
+            <span class="form-control" id="show-all-cards">Show All Cards</span>
+        </div>
+    </div>
+</div>
+<div character-card ng-repeat="card in character.cards | checkCard:cardOptions track by $index"></div>

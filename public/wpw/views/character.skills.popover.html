@@ -1,0 +1,23 @@
+<h4>{{skill.name | capitalize}} Breakdown</h4>
+<table class="table table-striped table-bordered">
+    <tr>
+        <td class="text-center">Value</td>
+        <td class="text-center">Type</td>
+    </tr>
+    <tr>
+        <td class="text-center">{{character.skills[skill.name].ranks}}</td>
+        <td class="text-center">ranks</td>
+    </tr>
+    <tr>
+        <td class="text-center">{{character.skills[skill.name].value('modifier')}}</td>
+        <td class="text-center">{{character.skills[skill.name].abilityScore.name}} mod</td>
+    </tr>
+    <tr ng-repeat="each in character.skills[skill.name].values">
+        <td class="text-center">{{each.value | calculateMath}}</td>
+        <td class="text-center">{{each.type}}</td>
+    </tr>
+    <tr ng-if="character.skills[skill.name].classSkill && character.skills[skill.name].ranks > 0">
+        <td class="text-center">3</td>
+        <td class="text-center">class skill</td>
+    </tr>
+</table>

@@ -1,0 +1,123 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="race-modal-title">Classes</h3>
+</div>
+<div class="modal-body" id="race-modal-body">
+    <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3" ng-repeat="each in json.classes">
+            <a class="btn aew-width100" ng-class="characterMeetsPrereqs($index) ? 'btn-default' : 'btn-danger'"
+               ng-click="selectClass($index)">{{each.name}}</a>
+        </div>
+    </div>
+    <hr ng-if="selectedClass !== null">
+    <div class="row" ng-if="selectedClass !== null">
+        <uib-accordion>
+            <!-- DESCRIPTION -->
+            <div uib-accordion-group class="panel-default"
+                 is-open="descriptions.isOpen" ng-init="descriptions = json.classes[selectedClass].descriptions">
+                <uib-accordion-heading>
+                    Description
+                    <i class="pull-right glyphicon"
+                       ng-class="{'glyphicon-chevron-down': descriptions.isOpen, 'glyphicon-chevron-right': !descriptions.isOpen}"></i>
+                </uib-accordion-heading>
+                <uib-accordion>
+                    <!-- role="button" ng-click="childToggle(desc)" -->
+                    <div uib-accordion-group class="panel-default" is-open="desc.isOpen" close-others="false"
+                         ng-repeat="desc in descriptions | orderBy: desc.position track by $index">
+                        <uib-accordion-heading>
+                            {{desc.title | capitalize}}
+                            <i class="pull-right glyphicon"
+                               ng-class="{'glyphicon-chevron-down': desc.isOpen, 'glyphicon-chevron-right': !desc.isOpen}"></i>
+                        </uib-accordion-heading>
+                        <div class="col-md-12">{{desc.text}}</div>
+                    </div>
+                </uib-accordion>
+            </div>
+        </uib-accordion>
+        <!-- CLASS DETAILS -->
+        <div class="main aew-afterDescription">
+            <div id="prereqs" ng-if="json.classes[selectedClass].prereqs">
+                <h3>Prerequisites</h3>
+                <ul>
+                    <li ng-repeat="(name, value) in json.classes[selectedClass].prereqs"><span
+                            class="bold">{{name | capitalize}}</span>: {{value}}
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div id="generalInfo">
+                <h2>Basic Information</h2>
+                <p>
+                    <span class="bold">Hit Die</span>: d{{json.classes[selectedClass].hitDie}}
+                </p>
+                <p>
+                    <span class="bold">Starting Wealth</span>: {{json.classes[selectedClass].wealth}}
+                </p>
+                <div id="skillInfo" ng-if="json.classes[selectedClass].classSkills">
+                    <h3>Class Skills</h3>
+                    <p><span ng-repeat="classSkill in json.classes[selectedClass].classSkills">{{classSkill | capitalize}}<span
+                            ng-if="!$last">, </span></span></p>
+                    <p>
+                        <span class="bold">Skill Ranks per Level</span>: {{json.classes[selectedClass].ranks}} + Int
+                        modifier.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <table class="table table-hover table-condensed table-bordered">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="text-center" colspan="3">Saves</td>
+                    <td></td>
+                    <td class="text-center" ng-if="spellFeaturePosition"
+                        colspan="{{spellFeatureDetails.formula.classes[json.classes[selectedClass].name.toLowerCase()].spells.max}}">
+                        {{spellFeatureDetails.formula.classes[json.classes[selectedClass].name.toLowerCase()].spells.text}}
+                    </td>
+                </tr>
+                <tr style="background-color: #efefef;">
+                    <td class="text-center">Level</td>
+                    <td class="text-center">BaB</td>
+                    <td class="text-center">Fort</td>
+                    <td class="text-center">Ref</td>
+                    <td class="text-center">Will</td>
+                    <td class="text-center">Class Features</td>
+                    <td class="text-center" ng-if="spellFeaturePosition"
+                        ng-repeat="(spellLevel, formula) in spellFeatureDetails.formula.classes[json.classes[selectedClass].name.toLowerCase()].spells.data">
+                        {{spellLevel}}
+                    </td>
+                </tr>
+                <tr role="button" ng-click="ok($index+1)" ng-repeat="empty in counter(json.classes[selectedClass].maxLevel) track by $index">
+                    <td class="text-center">{{$index+1}}</td>
+                    <td class="text-center">{{getBab($index+1)}}</td>
+                    <td class="text-center">{{getSave('fortitude', $index+1)}}</td>
+                    <td class="text-center">{{getSave('reflex', $index+1)}}</td>
+                    <td class="text-center">{{getSave('will', $index+1)}}</td>
+                    <td class="text-center" ng-init="classFeatures = getFeatureNamesForLevel($index+1)">
+                        <span ng-repeat="each in classFeatures">{{each.name | capitalize}}<span
+                                ng-if="!$last">, </span></span>
+                    </td>
+                    <td class="text-center" ng-if="spellFeaturePosition"
+                        ng-repeat="(spellLevel, formula) in spellFeatureDetails.formula.classes[json.classes[selectedClass].name.toLowerCase()].spells.data">
+                        {{executeFormulaWithShell(formula, $parent.$parent.$index+1) | spellsForSpellLevel}}
+                    </td>
+                </tr>
+            </table>
+            <div class="qualityDetails">
+                <h4>Class Features</h4>
+                <a class="btn btn-default aew-qualities" ng-init="classFeature = getFeatureByName(each)"
+                   ng-click="selectFeature(classFeature)" ng-repeat="each in json.classes[selectedClass].features">{{classFeature.name
+                    | limitCharacters}}</a>
+                <div class="main qualityDetails" ng-if="selectedFeature !== null">
+                    <p class="bold">
+                        {{selectedFeature.name}} <span ng-if="selectedFeature.type">({{selectedFeature.type}})</span>
+                    </p>
+                    <p ng-bind-html="selectedFeature.text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+</div>

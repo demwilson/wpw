@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Half-Celestial",
+    "text": "\"Half-celestial\" is an inherited or acquired template that can be added to any living, corporeal creature with an Intelligence score of 4 or more. A half-celestial creature retains the base creature’s statistics and special abilities except as noted here.",
+    "cr": "1 + max((getCharacterLevel() - 5) / 5, 2)",
+    "prerequisites": {
+      "alignment": [
+        "Lawful Good",
+        "Neutral Good",
+        "Chaotic Good"
+      ]
+    }
+
+  }
+]

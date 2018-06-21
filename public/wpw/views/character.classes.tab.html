@@ -1,0 +1,94 @@
+<div class="major-section">
+    <a class="btn btn-primary" ng-class="character.getCharacterLevel() > 0" ng-click="openModal('class')">Add Class</a>
+</div>
+<uib-tabset active="active" ng-if="character.getCharacterLevel() > 0">
+    <uib-tab index="$index" heading="{{currentClass.name}}" ng-repeat="currentClass in character.classes">
+        <div class="main">
+            <!-- DESCRIPTIONS CONTENT -->
+            <uib-accordion>
+                <div uib-accordion-group class="panel-default"
+                     is-open="section.isOpen"
+                     ng-repeat="section in currentClass.descriptions | orderBy:'+position'">
+                    <uib-accordion-heading>
+                        {{section.title}}
+                        <i class="pull-right glyphicon"
+                           ng-class="{'glyphicon-chevron-down': section.isOpen, 'glyphicon-chevron-right': !section.isOpen}"></i>
+                    </uib-accordion-heading>
+                    <p>
+                        {{section.text}}
+                    </p>
+                </div>
+            </uib-accordion>
+            <!-- GENERAL INFO -->
+            <div>
+                <div ng-if="currentClass.hitDie">
+                    <span class="bold">Hit Die</span>: d{{currentClass.hitDie}}
+                </div>
+                <div ng-if="currentClass.parentClasses">
+                    <span class="bold">Parent Classes</span>: {{currentClass.parentClasses[0]}}
+                    and
+                    {{currentClass.parentClasses[1]}}.
+                </div>
+                <div ng-if="currentClass.wealth">
+                    <span class="bold">Starting Wealth</span>: {{currentClass.wealth}}
+                </div>
+            </div>
+            <!-- REQUIREMENTS -->
+            <div ng-if="currentClass.prereqs">
+                <h2>Requirements</h2>
+                <div ng-repeat="(preName, preValue) in currentClass.prereqs">
+                    <span class="bold">{{preName | capitalize}}</span>: <span>{{preValue}}</span>
+                </div>
+            </div>
+            <!-- CLASS SKILLS -->
+            <div ng-if="currentClass.classSkills.length > 0">
+                <h2>Class Skills</h2>
+                <p><span ng-repeat="classSkill in currentClass.classSkills">{{classSkill | capitalize}}<span
+                        ng-if="!$last">, </span></span></p>
+                <p>
+                    <span class="bold">Skill Ranks per Level</span>: {{currentClass.ranks}} +
+                    Int
+                    modifier.
+                </p>
+            </div>
+            <div ng-if="currentClass.features">
+                <h2>Class Features</h2>
+                <a class="btn aew-qualities"
+                   ng-class="currentFeature.name === currentClass.selectedFeature.name ? 'btn-primary' : 'btn-default'"
+                   ng-click="selectFeature(currentClass, currentFeature)"
+                   ng-repeat="currentFeature in currentClass.features  | removeHiddenNoSelection">{{currentFeature.name |
+                    limitCharacters}}<span ng-if="currentFeature.choices">*</span></a>
+                <div class="main qualityDetails">
+                    <div>
+                        <p class="bold">
+                            {{currentClass.selectedFeature.name}} <span
+                                ng-if="currentClass.selectedFeature.type">({{currentClass.selectedFeature.type}})</span>
+                        </p>
+                        <p ng-bind-html="currentClass.selectedFeature.text"></p>
+                        <div ng-if="currentClass.selectedFeature.choices">
+                            <p>
+                                <span class="bold">Total Selections: </span>{{currentClass.selectedFeature.choices}}
+                            </p>
+                            <p>
+                                <span class="bold">Selection{{currentClass.selectedFeature.choices > 1 ? 's' : ''}} Made: </span><span
+                                    ng-repeat="selection in currentClass.selectedFeature.selections">{{selection | capitalize}}<span
+                                    ng-if="!$last">, </span></span>
+                            </p>
+                            <div class="qualityDetails">
+                                <a class="btn btn-primary"
+                                   ng-click="removeSelections(currentClass.selectedFeature)">Change
+                                    Selection{{currentClass.selectedFeature.choices > 1 ? 's' :
+                                    ''}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </uib-tab>
+    <!--uib-tab select="openModal('class')">
+        <uib-tab-heading>
+            <div><i class="glyphicon glyphicon-plus"></i></div>
+        </uib-tab-heading>
+    </uib-tab-->
+</uib-tabset>

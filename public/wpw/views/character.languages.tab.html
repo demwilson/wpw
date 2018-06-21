@@ -1,0 +1,71 @@
+<div>
+    <div>
+        <h4>Your Languages</h4>
+        <!-- Split button -->
+        <div class="btn-group aew-qualities" uib-dropdown
+             ng-repeat="language in character.languages.data track by $index">
+            <button id="split-button{{$index}}" type="button" class="btn btn-default"
+                    ng-class="{'btn-warning': language.choices > 0 && language.selections.length === 0}"
+                    ng-click="viewLanguage(language, true)">{{language.name}}
+            </button>
+            <button type="button" class="btn btn-default"
+                    ng-class="{'btn-warning': language.choices > 0 && language.selections.length === 0}"
+                    uib-dropdown-toggle>
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button{{$index}}">
+                <li><a href="javascript:;" ng-click="viewLanguage(language, true)">View details</a></li>
+                <li ng-if="language.choices > 0 && language.selections.length === 0">
+                    <a href="javascript:;" ng-click="viewLanguage(language, true)">Make
+                        selection{{language.choices > 1 ? 's' : ''}}</a></li>
+                <li ng-if="language.choices > 0 && language.selections.length > 0">
+                    <a href="javascript:;" ng-click="viewLanguage(language, true)">Change
+                        selection{{language.choices > 1 ? 's' : ''}}</a></li>
+                <li role="separator" class="divider" ng-if="!language.source"></li>
+                <li ng-if="!language.source">
+                    <a href="javascript:;" ng-click="removeLanguage(language)">Remove language</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="qualityDetails" ng-init="getLanguages()">
+        <div class="major-section">
+            <h4>Languages ( {{totalLanguagesFiltered}} of {{totalLanguages}} )</h4>
+            <div class="row">
+                <div class="col-md-4 match-button-space">
+                    Languages to select: {{character.languages.count.value() - character.languages.data.length}}
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="search-languages">Search</span>
+                        <input type="text" class="form-control" ng-model="languageSearchModel.name"
+                               placeholder="Search by name..." ng-change="updateLanguageSearch()"
+                               aria-describedby="search-languages">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!-- Split button -->
+            <div class="btn-group aew-qualities" uib-dropdown
+                 ng-repeat="language in filteredLanguages | filter:search | startFrom:(currentPage-1)*itemsPerPage | limitTo:itemsPerPage">
+                <button id="split-button" type="button" class="btn btn-default"
+                        ng-click="viewLanguage(language, false)">
+                    {{language.name}}
+                </button>
+                <button type="button" class="btn btn-default" uib-dropdown-toggle>
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                    <li><a href="javascript:;" ng-click="viewLanguage(language, false)">View details</a></li>
+                    <li ng-if="!language.choices || language.choices === 0" role="separator" class="divider"></li>
+                    <li ng-if="!language.choices || language.choices === 0">
+                        <a href="javascript:;" ng-click="selectLanguage(language)">Select language</a></li>
+                </ul>
+            </div>
+        </div>
+        <ul uib-pagination total-items="totalLanguagesFiltered" ng-model="currentPage" max-size="pagerButtonsToShow"
+            class="pagination-sm" boundary-link-numbers="true" items-per-page="itemsPerPage"></ul>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+{
+  "name": "wpw",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "body-parser": "latest",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "connect-flash": "latest",
+    "crypto": "0.0.3",
+    "ejs": "latest",
+    "express": "latest",
+    "express-session": "latest",
+    "gulp": "latest",
+    "karma": "^0.13.19",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^0.2.1",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "mocha": "^2.4.5",
+    "mongoose": "latest",
+    "passport": "latest",
+    "passport-facebook": "latest",
+    "passport-local": "latest",
+    "phantomjs-prebuilt": "^2.1.4"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OsoSangre/wpw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OsoSangre/wpw/issues"
+  },
+  "homepage": "https://github.com/OsoSangre/wpw#readme"
+}

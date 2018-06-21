@@ -1,0 +1,199 @@
+[
+  {
+    "name": "Paladin",
+    "descriptions": [
+      {
+        "title": "Summary",
+        "text": "Through a select, worthy few shines the power of the divine. Called paladins, these noble souls dedicate their swords and lives to the battle against evil. Knights, crusaders, and law-bringers, paladins seek not just to spread divine justice but to embody the teachings of the virtuous deities they serve. In pursuit of their lofty goals, they adhere to ironclad laws of morality and discipline. As reward for their righteousness, these holy champions are blessed with boons to aid them in their quests: powers to banish evil, heal the innocent, and inspire the faithful. Although their convictions might lead them into conflict with the very souls they would save, paladins weather endless challenges of faith and dark temptations, risking their lives to do right and fighting to bring about a brighter future.",
+        "position": 0
+      },
+      {
+        "title": "Role",
+        "text": "Paladins serve as beacons for their allies within the chaos of battle. While deadly opponents of evil, they can also empower goodly souls to aid in their crusades. Their magic and martial skills also make them well suited to defending others and blessing the fallen with the strength to continue fighting.",
+        "position": 1
+      }
+    ],
+    "prereqs": {
+      "alignment": "Lawful Good"
+    },
+    "hitDie": 10,
+    "maxLevel": 20,
+    "wealth": "5d6 * 10g",
+    "ranks": 2,
+    "bab": "full",
+    "classSkills": [
+      "craft",
+      "diplomacy",
+      "handle animal",
+      "heal",
+      "knowledge (nobility)",
+      "knowledge (religion)",
+      "profession",
+      "ride",
+      "sense motive",
+      "spellcraft"
+    ],
+    "saves":{
+      "fortitude": "good",
+      "reflex": "bad",
+      "will": "good"
+    },
+    "features": [
+      "Weapon and Armor Proficiency (Paladin)",
+      "Aura of Good",
+      "Detect Evil",
+      "Smite Evil",
+      "Smite Evil (2/day)",
+      "Smite Evil (3/day)",
+      "Smite Evil (4/day)",
+      "Smite Evil (5/day)",
+      "Smite Evil (6/day)",
+      "Smite Evil (7/day)",
+      "Divine Grace",
+      "Lay on Hands",
+      "Aura of Courage",
+      "Divine Health",
+      "Mercy",
+      "Mercy (6th)",
+      "Mercy (9th)",
+      "Mercy (12th)",
+      "Mercy (15th)",
+      "Mercy (18th)",
+      "Channel Positive Energy",
+      "Spells (Paladin)",
+      "Divine Bond",
+      "Aura of Resolve",
+      "Aura of Justice",
+      "Aura of Faith",
+      "Aura of Righteousness",
+      "Holy Champion"
+    ],
+    "favored": {
+      "Dwarf": {
+        "text": "Add a +1 bonus on concentration checks when casting paladin spells.",
+        "formula": {
+          "classes": {
+            "paladin": {
+              "spells": {
+                "concentration": {
+                  "add": {
+                    "type": "favored",
+                    "value": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "Elf": {
+        "text": "Add +1/2 hit point to the paladin's lay on hands ability (whether using it to heal or harm).",
+        "formula": ""
+      },
+      "Gnome": {
+        "text": "Add +1/2 hit point to the paladin's lay on hands ability (whether using it to heal or harm).",
+        "formula": ""
+      },
+      "Half-Elf": {
+        "text": "Add +1 foot to the size of all the paladin's aura class features. This option has no effect unless the paladin has selected it 5 times (or another increment of 5); an aura of 14 feet is effectively the same as a 10-foot aura, for example.",
+        "formula": {}
+      },
+      "Half-Orc": {
+        "text": "Add +⅓ on critical hit confirmation rolls made while using smite evil (maximum bonus of +5). This bonus does not stack with Critical Focus.",
+        "formula": ""
+      },
+      "Halfling": {
+        "text": "Add +½ hp to the paladin's lay on hands ability (whether using it to heal or harm).",
+        "formula": ""
+      },
+      "Human": {
+        "text": "Add +1 to the paladin's energy resistance to one kind of energy (maximum +10).",
+        "formula": ""
+      },
+      "Aasimar": {
+        "text": "Add +⅙ to the morale bonus on saving throws provided by the paladin's auras.",
+        "formula": ""
+      },
+      "Kobold": {
+        "text": "Add +¼ to the deflection bonus granted by your smite evil ability.",
+        "formula": ""
+      },
+      "Oread": {
+        "text": "Add +¼ to the bonus the paladin grants her allies with her aura of courage and aura of resolve special abilities.",
+        "formula": ""
+      },
+      "Tiefling": {
+        "text": "Add +1 to the amount of damage the paladin heals with lay on hands, but only when the paladin uses that ability on herself.",
+        "formula": ""
+      },
+      "Android": {
+        "text": "Add +1/2 hit point to the paladin’s lay on hands ability (whether using it to heal or harm).",
+        "formula": ""
+      },
+      "Catfolk": {
+        "text": "Add +1/6 to the morale bonus on saving throws provided by the paladin’s auras.",
+        "formula": ""
+      },
+      "Changeling": {
+        "text": "The paladin gains +1/6 of a new mercy.",
+        "formula": ""
+      },
+      "Dhampir": {
+        "text": "Add a +⅓ bonus on saving throws against death effects.",
+        "formula": ""
+      },
+      "Drow": {
+        "text": "The paladin adds +¼ to the number of mercies he can use.",
+        "formula": ""
+      },
+      "Duergar": {
+        "text": "Add +½ point of acid damage to the paladin’s lay on hands ability when used to deal damage.",
+        "formula": ""
+      },
+      "Fetchling": {
+        "text": "Add +1 to the paladin’s cold resistance (to a maximum increase of 10).",
+        "formula": ""
+      },
+      "Hobgoblin": {
+        "text": "Add a +½ circumstance bonus on critical hit confirmation rolls with a weapon of the paladin's choice (maximum bonus +4). This bonus does not stack with Critical Focus.",
+        "formula": ""
+      },
+      "Orc": {
+        "text": "Add +⅓ on critical hit confirmation rolls made while using smite evil (maximum bonus of +5). This bonus does not stack with Critical Focus.",
+        "formula": ""
+      },
+      "Ratfolk": {
+        "text": "Add +5 minutes to the amount of time before a condition returns when using one of your mercies (to a maximum of 1 additional hour).",
+        "formula": ""
+      },
+      "Wayang": {
+        "text": "Add +⅓ on critical hit confirmation rolls made while using smite evil (maximum bonus of +5). This bonus does not stack with Critical Focus.",
+        "formula": ""
+      },
+      "Lapith": {
+        "text": "Add +¼ AC bonus against a foe you are targeting with smite evil.",
+        "formula": ""
+      }
+    },
+    "archetypes": [
+      {
+        "name": "Chosen One",
+        "description": "Most paladins train for years at a temple to attain a holy status, but rarely, an emissary of the divine appears to one of humble origins and calls her directly to the charge.\n\n        These chosen ones may lack experience, but their teamwork with their emissaries allows them to defeat any evil.",
+        "added": [
+          "Divine Emissary",
+          "Religious Mentor",
+          "Delayed Grace",
+          "Lay on Paws",
+          "True Form",
+          "Emissary's Smite"
+        ],
+        "removed": [
+          "Divine Bond",
+          "Divine Grace",
+          "Smite Evil",
+          "Lay on Hands and Channel Positive Energy"
+        ]
+      }
+    ]
+  }
+]

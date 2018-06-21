@@ -1,0 +1,34 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Selection{{issues.choices > 1 ? 's' : ''}} Required</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="modal-body">
+        <h2 style="margin-top: 0;">{{issue.name}}</h2>
+        <p>
+            You must make {{issue.choices}} selection{{issues.choices > 1 ? 's' : ''}}.
+        </p>
+        <div>
+            <h3>Details:</h3>
+            <p ng-bind-html="issue.text"></p>
+        </div>
+        <p class="bold">Options:</p>
+        <div>
+            <a class="btn aew-qualities" ng-class="isSelectedOption(option) ? 'btn-success' : 'btn-default'"
+               ng-repeat="option in issue.options" ng-click="updateSelection($index)">{{option | capitalize}}</a>
+        </div>
+        <div class="qualityDetails">
+            <p class="bold">
+                Current Selection{{issues.choices > 1 ? 's' : ''}}:
+            </p>
+            <span ng-repeat="selection in issue.selections">{{selection | capitalize}}<span
+                    ng-if="!$last">, </span></span>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-class="issue.selections.length < issue.choices ? 'disabled' : ''" type="button"
+            ng-click="ok()">Save Selection
+    </button>
+    <!-- Can't handle them not choosing yet-->
+    <!--button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button-->
+</div>

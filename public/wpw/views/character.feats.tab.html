@@ -1,0 +1,69 @@
+<div>
+    <div>
+        <h4>Your Feats</h4>
+        <!-- Split button -->
+        <div class="btn-group aew-qualities" uib-dropdown
+             ng-repeat="feat in character.feats.data track by $index">
+            <button id="split-button{{$index}}" type="button" class="btn btn-default"
+                    ng-class="{'btn-warning': feat.choices > 0 && feat.selections.length === 0}"
+                    ng-click="viewFeat(feat, true)">{{feat.name}}
+            </button>
+            <button type="button" class="btn btn-default" uib-dropdown-toggle
+                    ng-class="{'btn-warning': feat.choices > 0 && feat.selections.length === 0}">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button{{$index}}">
+                <li><a href="javascript:;" ng-click="viewFeat(feat, true)">View details</a></li>
+                <li ng-if="feat.choices > 0 && feat.selections.length === 0">
+                    <a href="javascript:;" ng-click="viewFeat(feat, true)">Make
+                        selection{{feat.choices > 1 ? 's' : ''}}</a></li>
+                <li ng-if="feat.choices > 0 && feat.selections.length > 0">
+                    <a href="javascript:;" ng-click="viewFeat(feat, true)">Change
+                        selection{{feat.choices > 1 ? 's' : ''}}</a></li>
+                <li role="separator" class="divider" ng-if="!feat.source"></li>
+                <li ng-if="!feat.source">
+                    <a href="javascript:;" ng-click="removeItem(feat)">Remove feat</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="qualityDetails" ng-init="getFeats()">
+        <div class="major-section">
+            <h4>Feats ( {{totalFiltered}} of {{totalFeats}} )</h4>
+            <div class="row">
+                <div class="col-md-4 match-button-space">
+                    Feats to select: {{character.feats.count.value() - character.feats.data.length}}
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="search-feats">Search</span>
+                        <input type="text" class="form-control" ng-model="featSearchModel.name"
+                               placeholder="Search by name..." ng-change="updateSearch()"
+                               aria-describedby="search-feats">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!-- Split button -->
+            <div class="btn-group aew-qualities" uib-dropdown
+                 ng-repeat="feat in filteredFeats | filter:search | startFrom:(currentPage-1)*itemsPerPage | limitTo:itemsPerPage">
+                <button id="split-button" type="button" class="btn btn-default" ng-click="viewFeat(feat, false)">
+                    {{feat.name}}
+                </button>
+                <button type="button" class="btn btn-default" uib-dropdown-toggle>
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                    <li><a href="javascript:;" ng-click="viewFeat(feat, false)">View details</a></li>
+                    <li ng-if="!feat.choices || feat.choices === 0" role="separator" class="divider"></li>
+                    <li ng-if="!feat.choices || feat.choices === 0">
+                        <a href="javascript:;" ng-click="selectFeat(feat)">Select feat</a></li>
+                </ul>
+            </div>
+        </div>
+        <ul uib-pagination total-items="totalFiltered" ng-model="currentPage" max-size="pagerButtonsToShow"
+            class="pagination-sm" boundary-link-numbers="true" items-per-page="itemsPerPage"></ul>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<section class="container" id="feats_create" data-ng-controller="featsCreateController">
+    <h1>New Feat</h1>
+    <div data-ng-show="error">
+        <strong data-ng-bind="error"></strong>
+    </div>
+    <form class="form-signin" data-ng-submit="create()" novalidate>
+        <div class="labelAndElement">
+            <label for="name" class="">Name</label>
+            <div>
+                <input type="text" data-ng-model="feat.name" id="name" placeholder="Feat Name" required autofocus class="form-control">
+                <label for="requires_value">Requires Value</label>: <input type="checkbox" ng-model="feat.requires_value" id="requires_value">
+            </div>
+        </div>
+        <div class="labelAndElement">
+            <label class="">Types</label> <a data-ng-click="feat.addType()">add type</a>
+            <div data-ng-repeat="item in feat.types track by $index">
+                <input data-ng-model="feat.types[$index]" placeholder="text" class="form-control featInput">
+                <a class="removeFromArray" data-ng-click="feat.removeType($index)">remove</a>
+            </div>
+        </div>
+        <div class="labelAndElement">
+            <label class="">Prerequisites</label> <a data-ng-click="feat.addPrerequisite()">add row</a>
+            <div data-ng-repeat="prerequisite in feat.prerequisites">
+                Text: <input data-ng-model="feat.prerequisites[$index].text" placeholder="text" class="form-control featInput">
+                Type: <input data-ng-model="feat.prerequisites[$index].type" placeholder="type" class="form-control featInput">
+                Requirement: <input data-ng-model="feat.prerequisites[$index].requirement" placeholder="requirement" class="form-control featInput">
+                <a class="removeFromArray" data-ng-click="feat.removePrerequisite($index)">remove</a>
+            </div>
+        </div>
+        <div class="labelAndElement">
+            <label for="flavor_text" class="">Flavor Text</label>
+            <div>
+                <textarea data-ng-model="feat.flavor_text" id="flavor_text" cols="30" rows="4" placeholder="Flavor text" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="labelAndElement">
+            <label for="benefit" class="">Benefit</label>
+            <div>
+                <textarea data-ng-model="feat.benefit" id="benefit" cols="30" rows="4" placeholder="Benefit Text" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="labelAndElement">
+            <label for="normal" class="">Normal</label>
+            <div>
+                <textarea data-ng-model="feat.normal" id="normal" cols="30" rows="4" placeholder="Normal Text" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="labelAndElement">
+            <label for="special" class="">Special</label>
+            <div>
+                <textarea data-ng-model="feat.special" id="special" cols="30" rows="4" placeholder="Special Text" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="labelAndElement">
+            <label class="">Modifiers</label> <a data-ng-click="feat.addModifier()">add row</a>
+            <div data-ng-repeat="modifier in feat.modifiers">
+                Type: <input data-ng-model="feat.modifiers[$index].type" placeholder="type" class="form-control featInput">
+                Formula: <input data-ng-model="feat.modifiers[$index].formula" placeholder="formula" class="form-control featInput">
+                Conditional: <input data-ng-model="feat.modifiers[$index].conditional" placeholder="conditional" class="form-control featInput">
+                <a class="removeFromArray" data-ng-click="feat.removeModifier($index)">remove</a>
+            </div>
+        </div>
+        <div class="labelAndElement">
+            <label for="source" class="">Source</label>
+            <div>
+                <input type="text" data-ng-model="feat.source" id="source" placeholder="Leave blank for custom feats" required class="form-control">
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-lg btn-primary btn-block">Create Feat</button>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,80 @@
+<div class="row">
+    <!-- Row 1 -->
+    <div class="col-md-6 basics-spacing">
+        <div class="input-group">
+            <span class="input-group-addon" id="label-basics-name">Name</span>
+            <input type="text" class="form-control" ng-model="character.basics.name" id="basics-name"
+                   aria-describedby="label-basics-name">
+        </div>
+    </div>
+    <div class="col-md-6 basics-spacing">
+        <div class="input-group">
+            <span class="input-group-addon" id="label-basics-player">Player</span>
+            <input type="text" class="form-control" ng-model="character.basics.player" id="basics-player"
+                   aria-describedby="label-basics-player">
+        </div>
+    </div>
+    <!-- Row 2 -->
+    <div class="col-md-3 basics-spacing">
+        <div class="input-group">
+            <span class="input-group-addon" id="label-basics-gender">Gender</span>
+            <input type="text" class="form-control" ng-model="character.basics.gender" id="basics-gender"
+                   aria-describedby="label-basics-gender">
+        </div>
+    </div>
+    <div class="col-md-3 basics-spacing">
+        <div class="input-group">
+            <span class="input-group-addon" id="label-basics-height">Height</span>
+            <input type="text" class="form-control" ng-model="character.basics.height" id="basics-height"
+                   aria-describedby="label-basics-height">
+        </div>
+    </div>
+    <div class="col-md-3 basics-spacing">
+        <div class="input-group">
+            <span class="input-group-addon" id="label-basics-weight">Weight</span>
+            <input type="text" class="form-control" ng-model="character.basics.weight" id="basics-weight"
+                   aria-describedby="label-basics-weight">
+        </div>
+    </div>
+    <div class="col-md-3 basics-spacing">
+        <div class="input-group">
+            <span class="input-group-addon" id="label-basics-hair">Hair</span>
+            <input type="text" class="form-control" ng-model="character.basics.hair" id="basics-hair"
+                   aria-describedby="label-basics-hair">
+        </div>
+    </div>
+    <!-- Row 3 -->
+    <div class="col-md-3 basics-spacing">
+        <div class="input-group">
+            <span class="input-group-addon" id="label-basics-eyes">Eyes</span>
+            <input type="text" class="form-control" ng-model="character.basics.eyes" id="basics-eyes"
+                   aria-describedby="label-basics-eyes">
+        </div>
+    </div>
+    <div class="col-md-3 basics-spacing">
+        <div class="input-group">
+            <span class="input-group-addon" id="label-basics-age">Age</span>
+            <input type="text" class="form-control" ng-model="character.basics.age" id="basics-age"
+                   aria-describedby="label-basics-age">
+        </div>
+    </div>
+    <div class="col-md-4 basics-spacing">
+        <div class="input-group">
+            <span class="input-group-addon" id="label-basics-skin">Skin</span>
+            <input type="text" class="form-control" ng-model="character.basics.skin" id="basics-skin"
+                   aria-describedby="label-basics-skin">
+        </div>
+    </div>
+</div>
+<!-- Alignment Section -->
+<div class="major-section">
+    <h4>Alignment</h4>
+    <div class="col-sm-12 col-md-8 col-lg-6">
+        <div class="row table-bordered">
+            <div class="col-sm-4 col-md-4" ng-repeat="each in availableAlignments"
+                 ng-click="selectAlignment(each)" ng-class="{'btn': true, 'btn-primary': character.alignment === each}">
+                {{each}}
+            </div>
+        </div>
+    </div>
+</div>

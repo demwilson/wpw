@@ -1,0 +1,1561 @@
+[
+  {
+    "name": "Battle aspergillum",
+    "flavor": null,
+    "text": null,
+    "cost": 5,
+    "slot": "1-hand",
+    "damage": "1d6",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "range": null,
+    "weight": 4,
+    "damageType": [
+      "B"
+    ],
+    "special": [
+      "see text"
+    ],
+    "type": "weapon",
+    "tags": [
+      "simple",
+      "light",
+      "melee"
+    ],
+    "source": "Pathfinder Roleplaying Game: Advanced Player's Guide"
+  },
+  {
+    "name": "Brass knife",
+    "flavor": null,
+    "text": null,
+    "cost": 2,
+    "slot": "1-hand",
+    "damage": "1d4",
+    "crit": {
+      "range": "19-20",
+      "multiplier": 2
+    },
+    "range": 10,
+    "weight": 1,
+    "damageType": [
+      "P",
+      "S"
+    ],
+    "special": [
+      "fragile"
+    ],
+    "type": "weapon",
+    "tags": [
+      "simple",
+      "light",
+      "melee"
+    ],
+    "source": "Pathfinder Player Companion: Pirates of the Inner Sea"
+  },
+  {
+    "name": "Brass knuckles",
+    "flavor": null,
+    "text": null,
+    "cost": 1,
+    "slot": "1-hand",
+    "damage": "1d3",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "range": null,
+    "weight": 1,
+    "damageType": [
+      "B"
+    ],
+    "special": [
+      "monk"
+    ],
+    "type": "weapon",
+    "tags": [
+      "simple",
+      "light",
+      "melee"
+    ],
+    "source": "Pathfinder Roleplaying Game: Advanced Player's Guide"
+  },
+  {
+    "name": "Cestus",
+    "flavor": null,
+    "text": null,
+    "cost": 5,
+    "slot": "1-hand",
+    "damage": "1d4",
+    "crit": {
+      "range": "19-20",
+      "multiplier": 2
+    },
+    "range": null,
+    "weight": 1,
+    "damageType": [
+      "P",
+      "B"
+    ],
+    "special": [
+      "monk"
+    ],
+    "type": "weapon",
+    "tags": [
+      "simple",
+      "light",
+      "melee"
+    ],
+    "source": "Pathfinder Roleplaying Game: Advanced Player's Guide"
+  },
+  {
+    "name": "Dagger",
+    "flavor": null,
+    "text": null,
+    "cost": 2,
+    "slot": "1-hand",
+    "damage": "1d4",
+    "crit": {
+      "range": "19-20",
+      "multiplier": 2
+    },
+    "range": 10,
+    "weight": 1,
+    "damageType": [
+      "P",
+      "S"
+    ],
+    "type": "weapon",
+    "tags": [
+      "simple",
+      "light",
+      "melee"
+    ],
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Dagger, punching",
+    "flavor": null,
+    "text": null,
+    "cost": 1,
+    "slot": "1-hand",
+    "damage": "1d4",
+    "crit": {
+      "range": "20",
+      "multiplier": 3
+    },
+    "range": null,
+    "weight": 1,
+    "damageType": [
+      "P"
+    ],
+    "special": [],
+    "type": "weapon",
+    "tags": [
+      "simple",
+      "light",
+      "melee"
+    ],
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Gauntlet, spiked",
+    "flavor": null,
+    "text": null,
+    "cost": 5,
+    "slot": "1-hand",
+    "damage": "1d4",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "range": null,
+    "weight": 1,
+    "damageType": [
+      "P"
+    ],
+    "special": [],
+    "type": "weapon",
+    "tags": [
+      "simple",
+      "light",
+      "melee"
+    ],
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Hook hand",
+    "flavor": null,
+    "text": null,
+    "cost": 10,
+    "slot": "1-hand",
+    "damage": "1d4",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "range": null,
+    "weight": 1,
+    "damageType": [
+      "S"
+    ],
+    "special": [
+      "disarm"
+    ],
+    "type": "weapon",
+    "tags": [
+      "simple",
+      "light",
+      "melee"
+    ],
+    "source": "Pathfinder Player Companion: Pirates of the Inner Sea"
+  },
+  {
+    "name": "Kunai",
+    "flavor": null,
+    "text": null,
+    "cost": 2,
+    "slot": "1-hand",
+    "damage": "1d4",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "range": 10,
+    "weight": 2,
+    "damageType": [
+      "P",
+      "B"
+    ],
+    "special": [],
+    "type": "weapon",
+    "tags": [
+      "simple",
+      "light",
+      "melee"
+    ],
+    "source": "Pathfinder Player Companion: Ranged Tactics Toolbox"
+  },
+  {
+    "name": "Mace, light",
+    "flavor": null,
+    "text": null,
+    "cost": 5,
+    "slot": "1-hand",
+    "damage": "1d6",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "range": null,
+    "weight": 4,
+    "damageType": [
+      "P"
+    ],
+    "special": [],
+    "type": "weapon",
+    "tags": [
+      "simple",
+      "light",
+      "melee"
+    ],
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Sickle",
+    "flavor": null,
+    "text": null,
+    "cost": 6,
+    "slot": "1-hand",
+    "damage": "1d6",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "range": null,
+    "weight": 2,
+    "damageType": [
+      "S"
+    ],
+    "special": [
+      "trip"
+    ],
+    "type": "weapon",
+    "tags": [
+      "simple",
+      "light",
+      "melee"
+    ],
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Spring blade",
+    "flavor": null,
+    "text": null,
+    "cost": 70,
+    "slot": "1-hand",
+    "damage": "1d4",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "range": 10,
+    "weight": 1,
+    "damageType": [
+      "P",
+      "S"
+    ],
+    "special": [],
+    "type": "weapon",
+    "tags": [
+      "simple",
+      "light",
+      "melee"
+    ],
+    "source": "Pathfinder Roleplaying Game: Ultimate Intrigue"
+  },
+  {
+    "name": "Wooden stake",
+    "flavor": null,
+    "text": null,
+    "cost": 0,
+    "slot": "1-hand",
+    "damage": "1d4",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "range": 10,
+    "weight": 1,
+    "damageType": [
+      "P"
+    ],
+    "special": [],
+    "type": "weapon",
+    "tags": [
+      "simple",
+      "light",
+      "melee"
+    ],
+    "source": "Pathfinder Roleplaying Game: Advanced Player's Guide"
+  },
+  {
+    "name": "Ankus",
+    "cost": 8,
+    "slot": "1-hand",
+    "damage": "1d8",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "weight": 5,
+    "damageType": [
+      "P"
+    ],
+    "special": [
+      "disarm",
+      "trip"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Battleaxe",
+    "cost": 10,
+    "slot": "1-hand",
+    "damage": "1d8",
+    "crit": {
+      "range": "20",
+      "multiplier": 3
+    },
+    "weight": 6,
+    "damageType": [
+      "S"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Combat scabbard",
+    "cost": 1,
+    "slot": "1-hand",
+    "damage": "1d6",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "weight": 1,
+    "damageType": [
+      "B"
+    ],
+    "special": [
+      "improvised",
+      "see text"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Cutlass",
+    "cost": 15,
+    "slot": "1-hand",
+    "damage": "1d6",
+    "crit": {
+      "range": "18-20",
+      "multiplier": "2"
+    },
+    "weight": 4,
+    "damageType": [
+      "S"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Flail",
+    "cost": 8,
+    "slot": "1-hand",
+    "damage": "1d8",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "weight": 5,
+    "damageType": [
+      "B"
+    ],
+    "special": [
+      "disarm",
+      "trip"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Gandasa",
+    "cost": 15,
+    "slot": "1-hand",
+    "damage": "2d4",
+    "crit": {
+      "range": "20",
+      "multiplier": 3
+    },
+    "weight": 4,
+    "damageType": [
+      "S"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Klar",
+    "cost": 12,
+    "slot": "1-hand",
+    "damage": "1d6",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "weight": 6,
+    "damageType": [
+      "S"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Longsword",
+    "cost": 15,
+    "slot": "1-hand",
+    "damage": "1d8",
+    "crit": {
+      "range": "19-20",
+      "multiplier": "2"
+    },
+    "weight": 4,
+    "damageType": [
+      "S"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Manople",
+    "cost": 17,
+    "slot": "1-hand",
+    "damage": "1d8",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "weight": 4,
+    "damageType": [
+      "P",
+      "S"
+    ],
+    "special": [
+      "blocking",
+      "disarm"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Pick, heavy",
+    "cost": 8,
+    "slot": "1-hand",
+    "damage": "1d6",
+    "crit": {
+      "range": "20",
+      "multiplier": 4
+    },
+    "weight": 6,
+    "damageType": [
+      "P"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Rapier",
+    "cost": 20,
+    "slot": "1-hand",
+    "damage": "1d6",
+    "crit": {
+      "range": "18–20",
+      "multiplier": "2"
+    },
+    "weight": 2,
+    "damageType": [
+      "P"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Scabbard, combat (sharpened)",
+    "cost": 10,
+    "slot": "1-hand",
+    "damage": "1d6",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "weight": 1,
+    "damageType": [
+      "S"
+    ],
+    "special": [
+      "see text"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Scimitar",
+    "cost": 15,
+    "slot": "1-hand",
+    "damage": "1d6",
+    "crit": {
+      "range": "18–20",
+      "multiplier": "2"
+    },
+    "weight": 4,
+    "damageType": [
+      "S"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Scizore",
+    "cost": 20,
+    "slot": "1-hand",
+    "damage": "1d10",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "weight": 3,
+    "damageType": [
+      "P"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Sword cane",
+    "cost": 45,
+    "slot": "1-hand",
+    "damage": "1d6",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "weight": 4,
+    "damageType": [
+      "P"
+    ],
+    "special": [
+      "see text"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Terbutje",
+    "cost": 5,
+    "slot": "1-hand",
+    "damage": "1d8",
+    "crit": {
+      "range": "19-20",
+      "multiplier": "2"
+    },
+    "weight": 2,
+    "damageType": [
+      "S"
+    ],
+    "special": [
+      "fragile"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Terbutje, steel",
+    "cost": 20,
+    "slot": "1-hand",
+    "damage": "1d8",
+    "crit": {
+      "range": "19-20",
+      "multiplier": "2"
+    },
+    "weight": 4,
+    "damageType": [
+      "S"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Trident",
+    "cost": 15,
+    "slot": "1-hand",
+    "damage": "1d8",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "range": 10,
+    "weight": 4,
+    "damageType": [
+      "P"
+    ],
+    "special": [
+      "brace"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Warhammer",
+    "cost": 12,
+    "slot": "1-hand",
+    "damage": "1d8",
+    "crit": {
+      "range": "20",
+      "multiplier": 3
+    },
+    "weight": 5,
+    "damageType": [
+      "B"
+    ],
+    "type": "weapon",
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee"
+    ]
+  },
+  {
+    "name": "Handaxe",
+    "cost": 6,
+    "slot": "1-hand",
+    "damage": "1d6",
+    "crit": {
+      "range": "20",
+      "multiplier": 3
+    },
+    "weight": 3,
+    "damageType": [
+      "S"
+    ],
+    "tags": [
+      "martial",
+      "light",
+      "melee"
+    ],
+    "type": "weapon"
+  },
+  {
+    "name": "Sap",
+    "cost": 1,
+    "slot": "1-hand",
+    "damage": "1d6",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "weight": 2,
+    "damageType": [
+      "B"
+    ],
+    "special": [
+      "nonlethal"
+    ],
+    "tags": [
+      "martial",
+      "light",
+      "melee"
+    ],
+    "type": "weapon"
+  },
+  {
+    "name": "Greatclub",
+    "cost": 5,
+    "slot": "2-hand",
+    "damage": "1d10",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "weight": 8,
+    "damageType": [
+      "B"
+    ],
+    "tags": [
+      "martial",
+      "two-handed",
+      "melee"
+    ],
+    "type": "weapon"
+  },
+  {
+    "name": "Padded",
+    "flavor": "Little more than heavy, quilted cloth, this armor provides only the most basic protection.",
+    "text": null,
+    "cost": 5,
+    "slot": "armor",
+    "bonus": 1,
+    "maxDex": 8,
+    "armorPenalty": 0,
+    "arcaneFailure": 5,
+    "speed": "normal",
+    "weight": 10,
+    "tags": [
+      "armor",
+      "light"
+    ],
+    "type": "armor",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Quilted Cloth",
+    "flavor": null,
+    "text": "<b>Benefit</b>: You gain DR 3/— against attacks of this kind (small piercing weapons). The special layers of the armor have no effect on other kinds of weapons.",
+    "cost": 100,
+    "slot": "armor",
+    "bonus": 1,
+    "maxDex": 8,
+    "armorPenalty": 0,
+    "arcaneFailure": 10,
+    "speed": "normal",
+    "weight": 15,
+    "tags": [
+      "armor",
+      "light"
+    ],
+    "type": "armor",
+    "Source": "Advanced Players Guide"
+  },
+  {
+    "name": "Leather",
+    "flavor": "Leather armor is made up of pieces of hard boiled leather carefully sewn together.",
+    "text": null,
+    "cost": 10,
+    "slot": "armor",
+    "bonus": 2,
+    "maxDex": 6,
+    "armorPenalty": 0,
+    "arcaneFailure": 10,
+    "speed": "normal",
+    "weight": 15,
+    "tags": [
+      "armor",
+      "light"
+    ],
+    "type": "armor",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Rosewood armor",
+    "flavor": null,
+    "text": "<b>Benefit</b>: Treat this as leather armor with armor spikes. The vines must be watered with at least 1 gallon of water each day or they wither and die, turning the armor into normal leather armor.",
+    "cost": 50,
+    "slot": "armor",
+    "bonus": 2,
+    "maxDex": 6,
+    "armorPenalty": 0,
+    "arcaneFailure": 10,
+    "speed": "normal",
+    "weight": 15,
+    "tags": [
+      "armor",
+      "light"
+    ],
+    "type": "armor",
+    "source": "Adventure's Armory"
+  },
+  {
+    "name": "Hide shirt",
+    "flavor": null,
+    "text": "Made from animal hide and giant lizard scales over a shirt of interwoven cords, these chest and shoulder coverings protect without restricting mobility.<br><br>The wearer of a hide shirt can make a DC 15 Strength check as a standard action. If he succeeds, the armor gains the broken condition and drops to the ground rather than requiring the usual 1 minute it would take to remove it. The armor must be repaired as though it had taken 8 points of damage before it can be used again; a broken hide shirt grants no bonus to Armor Class.",
+    "cost": 20,
+    "slot": "armor",
+    "bonus": 3,
+    "maxDex": 4,
+    "armorPenalty": -1,
+    "arcaneFailure": 15,
+    "speed": "normal",
+    "weight": 18,
+    "tags": [
+      "armor",
+      "light"
+    ],
+    "type": "armor",
+    "source": "Pathfinder Player Companion: Varisia, Birthplace of Legends"
+  },
+  {
+    "name": "Leaf armor",
+    "flavor": null,
+    "text": "<b>Benefit</b>: Leaf armor is always of masterwork quality and has the same game statistics as masterwork studded leather, except it contains no metal.",
+    "cost": 500,
+    "slot": "armor",
+    "bonus": 3,
+    "maxDex": 5,
+    "armorPenalty": 0,
+    "arcaneFailure": 15,
+    "speed": "normal",
+    "weight": 20,
+    "tags": [
+      "armor",
+      "light"
+    ],
+    "type": "armor",
+    "source": "Pathfinder: Campaign Setting, The Inner Sea World Guide"
+  },
+  {
+    "name": "Parade armor",
+    "flavor": null,
+    "text": "<b>Benefit</b>: If you’re wearing a country’s parade armor, you gain a +2 circumstance bonus to Diplomacy and Intimidate checks to influence a person from that country.",
+    "cost": 25,
+    "slot": "armor",
+    "bonus": 3,
+    "maxDex": 5,
+    "armorPenalty": -1,
+    "arcaneFailure": 15,
+    "speed": "normal",
+    "weight": 20,
+    "tags": [
+      "armor",
+      "light"
+    ],
+    "type": "armor",
+    "source": "Adventure's Armory"
+  },
+  {
+    "name": "Studded leather",
+    "flavor": "Similar to leather armor, this suit is reinforced with small metal studs.",
+    "text": null,
+    "cost": 25,
+    "slot": "armor",
+    "bonus": 3,
+    "maxDex": 5,
+    "armorPenalty": -1,
+    "arcaneFailure": 15,
+    "speed": "normal",
+    "weight": 20,
+    "tags": [
+      "armor",
+      "light"
+    ],
+    "type": "armor",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Wooden",
+    "flavor": null,
+    "text": "<b>Benefit</b>: The armor check penalty for swimming in this armor is 0.",
+    "cost": 20,
+    "slot": "armor",
+    "bonus": 4,
+    "maxDex": 4,
+    "armorPenalty": -2,
+    "arcaneFailure": 15,
+    "speed": "normal",
+    "weight": 25,
+    "tags": [
+      "armor",
+      "light"
+    ],
+    "type": "armor",
+    "Source": "Advanced Players Guide"
+  },
+  {
+    "name": "Chain shirt",
+    "flavor": "Covering the torso, this shirt is made up of thousands of interlocking metal rings.",
+    "text": null,
+    "cost": 100,
+    "slot": "armor",
+    "bonus": 4,
+    "maxDex": 4,
+    "armorPenalty": -2,
+    "arcaneFailure": 20,
+    "speed": "normal",
+    "weight": 0,
+    "tags": [
+      "armor",
+      "light"
+    ],
+    "type": "armor",
+    "source": "Pathfinder Roleplaying Game: Ultimate Equipment"
+  },
+  {
+    "name": "Armored Coat",
+    "flavor": null,
+    "text": "<b>Benefit</b>: More cumbersome than light armor but less effective than most medium armors, the advantage of an armored coat is that a person can don it or remove it as a move action (there is no “don hastily” option for an armored coat). If worn over other armor, use the better AC bonus and worse value in all other categories; an armored coat has no effect if worn with heavy armor. The only magic effects that apply are those worn on top.",
+    "cost": 50,
+    "slot": "armor",
+    "bonus": 4,
+    "maxDex": 3,
+    "armorPenalty": -2,
+    "arcaneFailure": 20,
+    "speed": "reduced",
+    "weight": 20,
+    "tags": [
+      "medium",
+      "armor"
+    ],
+    "type": "armor",
+    "Source": "Pathfinder Roleplaying Game: Ultimate Equipment"
+  },
+  {
+    "name": "Hide",
+    "flavor": "Hide armor is made up of the tanned and preserved skin of any thick-hided beast.",
+    "text": null,
+    "cost": 15,
+    "slot": "armor",
+    "bonus": 4,
+    "maxDex": 4,
+    "armorPenalty": -3,
+    "arcaneFailure": 20,
+    "speed": "reduced",
+    "weight": 20,
+    "tags": [
+      "medium",
+      "armor"
+    ],
+    "type": "armor",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Scale mail",
+    "flavor": "Scale mail is made up of dozens of small overlapping metal plates. The suit includes gauntlets.",
+    "text": null,
+    "cost": 50,
+    "slot": "armor",
+    "bonus": 5,
+    "maxDex": 3,
+    "armorPenalty": -4,
+    "arcaneFailure": 25,
+    "speed": "reduced",
+    "weight": 30,
+    "tags": [
+      "medium",
+      "armor"
+    ],
+    "type": "armor",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Chainmail",
+    "flavor": "Unlike a chain shirt, chainmail covers the legs and arms of the wearer. The suit includes gauntlets.",
+    "text": null,
+    "cost": 150,
+    "slot": "armor",
+    "bonus": 6,
+    "maxDex": 3,
+    "armorPenalty": -5,
+    "arcaneFailure": 30,
+    "speed": "reduced",
+    "weight": 40,
+    "tags": [
+      "medium",
+      "armor"
+    ],
+    "type": "armor",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Breastplate",
+    "flavor": "Covering only the torso, a breastplate is made up of a single piece of sculpted metal.",
+    "text": null,
+    "cost": 200,
+    "slot": "armor",
+    "bonus": 6,
+    "maxDex": 3,
+    "armorPenalty": -4,
+    "arcaneFailure": 25,
+    "speed": "reduced",
+    "weight": 30,
+    "tags": [
+      "medium",
+      "armor"
+    ],
+    "type": "armor",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Breastplate (agile)",
+    "flavor": "This breastplate is specially crafted in a manner that allows extra maneuverability for some physical activities.",
+    "text": "<b>Benefit</b>: The armor check penalty for Climb checks and Acrobatics checks made to jump is only –1 (masterwork and mithral versions of this armor reduce this penalty as well as the normal penalty).",
+    "cost": 400,
+    "slot": "armor",
+    "bonus": 6,
+    "maxDex": 3,
+    "armorPenalty": -4,
+    "arcaneFailure": 25,
+    "speed": "reduced",
+    "weight": 25,
+    "tags": [
+      "medium",
+      "armor",
+      "agile"
+    ],
+    "type": "armor",
+    "Source": "Pathfinder Roleplaying Game: Ultimate Equipment"
+  },
+  {
+    "name": "Splint mail",
+    "flavor": "Splint mail is made up of metal strips, like banded mail. The suit includes gauntlets.",
+    "text": null,
+    "cost": 200,
+    "slot": "armor",
+    "bonus": 7,
+    "maxDex": 0,
+    "armorPenalty": -7,
+    "arcaneFailure": 40,
+    "speed": "reduced",
+    "weight": 45,
+    "tags": [
+      "heavy",
+      "armor"
+    ],
+    "type": "armor",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Banded mail",
+    "flavor": "Banded mail is made up of overlapping strips of metal, fastened to a leather backing. The suit includes gauntlets.",
+    "text": null,
+    "cost": 250,
+    "slot": "armor",
+    "bonus": 7,
+    "maxDex": 1,
+    "armorPenalty": -6,
+    "arcaneFailure": 35,
+    "speed": "reduced",
+    "weight": 35,
+    "tags": [
+      "heavy",
+      "armor"
+    ],
+    "type": "armor",
+    "source": "Pathfinder Roleplaying Game: Ultimate Equipment"
+  },
+  {
+    "name": "Field plate",
+    "flavor": null,
+    "text": "<b>Benefit</b>: Field plate is effectively the same as masterwork banded mail. You can purchase masterwork field plate.",
+    "cost": 1200,
+    "slot": "armor",
+    "bonus": 7,
+    "maxDex": 1,
+    "armorPenalty": -5,
+    "arcaneFailure": 35,
+    "speed": "reduced",
+    "weight": 50,
+    "tags": [
+      "heavy",
+      "armor"
+    ],
+    "type": "armor",
+    "source": "Pathfinder: Campaign Setting, The Inner Sea World Guide"
+  },
+  {
+    "name": "Half-plate",
+    "flavor": "Combining elements of full plate and chainmail, half-plate includes gauntlets and a helm.",
+    "text": null,
+    "cost": 600,
+    "slot": "armor",
+    "bonus": 8,
+    "maxDex": 0,
+    "armorPenalty": -7,
+    "arcaneFailure": 40,
+    "speed": "reduced",
+    "weight": 50,
+    "tags": [
+      "heavy",
+      "armor"
+    ],
+    "type": "armor",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Half-plate (agile)",
+    "flavor": "This style of half-plate is specially crafted in a manner that allows extra maneuverability for some physical activities.",
+    "text": "<b>Benefit</b>: The armor check penalty for Climb checks and jump checks is only –4 (masterwork and mithral versions of this armor reduce this penalty as well as the normal penalty). In addition, unlike most heavy armors, the wearer can still run at quadruple speed instead of triple speed.",
+    "cost": 850,
+    "slot": "armor",
+    "bonus": 8,
+    "maxDex": 0,
+    "armorPenalty": -7,
+    "arcaneFailure": 40,
+    "speed": "reduced",
+    "weight": 55,
+    "tags": [
+      "heavy",
+      "armor",
+      "agile"
+    ],
+    "type": "armor",
+    "Source": "Advanced Players Guide"
+  },
+  {
+    "name": "Full plate",
+    "flavor": "This metal suit includes gauntlets, heavy leather boots, a visored helmet, and a thick layer of padding that is worn underneath the armor. ",
+    "text": "Each suit of full plate must be individually fitted to its owner by a master armorsmith, although a captured suit can be resized to fit a new owner at a cost of 200 to 800 (2d4 × 100) gold pieces.",
+    "cost": 1500,
+    "slot": "armor",
+    "bonus": 9,
+    "maxDex": 1,
+    "armorPenalty": -6,
+    "arcaneFailure": 35,
+    "speed": "reduced",
+    "weight": 50,
+    "tags": [
+      "heavy",
+      "armor"
+    ],
+    "type": "armor",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Hellknight plate",
+    "flavor": null,
+    "text": "These distinctive suits of armor are a special type of masterwork full plate that, when worn by a character with levels in the Hell Knight Commander prestige class, grants additional effects.",
+    "cost": 2000,
+    "slot": "armor",
+    "bonus": 9,
+    "maxDex": 1,
+    "armorPenalty": -5,
+    "arcaneFailure": 35,
+    "speed": "reduced",
+    "weight": 50,
+    "tags": [
+      "heavy",
+      "armor"
+    ],
+    "type": "armor",
+    "source": "Pathfinder: Campaign Setting, The Inner Sea World Guide"
+  },
+  {
+    "name": "Stoneplate",
+    "flavor": "Crafted by dwarven stonesmiths from alchemically strengthened plates of basalt primarily for use by dwarven druids, stoneplate is heavy and unwieldy, but offers incredible protection to its wearer.",
+    "text": null,
+    "cost": 1800,
+    "slot": "armor",
+    "bonus": 9,
+    "maxDex": 1,
+    "armorPenalty": -6,
+    "arcaneFailure": 35,
+    "speed": "reduced",
+    "weight": 75,
+    "tags": [
+      "heavy",
+      "armor"
+    ],
+    "type": "armor",
+    "source": "Pathfinder: Campaign Setting, The Inner Sea World Guide"
+  },
+  {
+    "name": "Buckler",
+    "flavor": null,
+    "text": "<b>Benefit</b>: This small metal shield is worn strapped to your forearm. You can use a bow or crossbow without penalty while carrying it. You can also use your shield arm to wield a weapon (whether you are using an offhand weapon or using your off hand to help wield a two-handed weapon), but you take a –1 penalty on attack rolls while doing so. This penalty stacks with those that may apply for fighting with your off hand and for fighting with two weapons. In any case, if you use a weapon in your off hand, you lose the buckler’s Armor Class bonus until your next turn. You can cast a spell with somatic components using your shield arm, but you lose the buckler’s Armor Class bonus until your next turn. You can’t make a shield bash with a buckler.",
+    "cost": 5,
+    "slot": "1-hand",
+    "damage": null,
+    "crit": null,
+    "damageType": null,
+    "bonus": 1,
+    "maxDex": null,
+    "armorPenalty": -1,
+    "arcaneFailure": 5,
+    "weight": 5,
+    "tags": [
+      "shield"
+    ],
+    "type": "shield",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Klar",
+    "flavor": "This blade is bound to the skull of a horned giant gecko. Armorers have started crafting these bladed shields from steel. The klar, like the madu is both a weapon and a shield.",
+    "text": "<b>Benefit</b>: If you are proficient with the klar, you may treat it as a spiked light wooden shield (or light steel shield, if made entirely of metal); otherwise it is just a light shield.",
+    "cost": 12,
+    "slot": "1-hand",
+    "damage": "1d4",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "damageType": [
+      "P"
+    ],
+    "bonus": 1,
+    "maxDex": null,
+    "armorPenalty": -1,
+    "arcaneFailure": 5,
+    "weight": 6,
+    "tags": [
+      "martial",
+      "one-handed",
+      "melee",
+      "shield"
+    ],
+    "type": "shield",
+    "source": "Pathfinder: Campaign Setting, The Inner Sea World Guide"
+  },
+  {
+    "name": "Madu, leather",
+    "flavor": "The madu is a round, light shield made of wood with four spikes extending from the sides.",
+    "text": "<b>Benefit</b>: If you are proficient with the madu, you may wield it and fight defensively with a –2 penalty instead of the normal–4 penalty for fighting defensively, and your attack penalty for using Combat Expertise improves by +1 (minimum –1 penalty). You cannot hold anything else in the hand that bears a madu. If you are not proficient in madu, treat it as a light spiked shield.",
+    "cost": 30,
+    "slot": "1-hand",
+    "bonus": 1,
+    "maxDex": null,
+    "armorPenalty": -2,
+    "arcaneFailure": 5,
+    "weight": 5,
+    "tags": [
+      "leather",
+      "shield"
+    ],
+    "type": "shield",
+    "source": "Adventure's Armory"
+  },
+  {
+    "name": "Madu, steel",
+    "flavor": "The madu is a round, light shield made of steel with four spikes extending from the sides.",
+    "text": "<b>Benefit</b>: If you are proficient with the madu, you may wield it and fight defensively with a –2 penalty instead of the normal–4 penalty for fighting defensively, and your attack penalty for using Combat Expertise improves by +1 (minimum –1 penalty). You cannot hold anything else in the hand that bears a madu. If you are not proficient in madu, treat it as a light spiked shield.",
+    "cost": 40,
+    "slot": "1-hand",
+    "bonus": 1,
+    "maxDex": null,
+    "armorPenalty": -2,
+    "arcaneFailure": 5,
+    "weight": 6,
+    "tags": [
+      "steel",
+      "shield"
+    ],
+    "type": "shield",
+    "source": "Adventure's Armory"
+  },
+  {
+    "name": "Shield, light wooden",
+    "flavor": "You strap a shield to your forearm and grip it with your hand. A light shield's weight lets you carry other items in that hand, although you cannot use weapons with it.",
+    "text": "If you use your shield as a weapon, you lose its Armor Class bonus until your next turn. An enhancement bonus on a shield does not improve the effectiveness of a shield bash made with it, but the shield can be made into a magic weapon in its own right.",
+    "cost": 3,
+    "slot": "1-hand",
+    "damage": "1d3",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "damageType": [
+      "B"
+    ],
+    "bonus": 1,
+    "maxDex": null,
+    "armorPenalty": -1,
+    "arcaneFailure": 5,
+    "weight": 5,
+    "tags": [
+      "light",
+      "wooden",
+      "shield",
+      "martial",
+      "light",
+      "melee"
+    ],
+    "type": "shield",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Shield, light wooden (quickdraw)",
+    "flavor": "This light shield is specially crafted with a series of straps to allow a character proficient in shields to ready or stow it on his or her back quickly and easily.",
+    "text": "<b>Benefit</b>: If you have a base attack bonus of +1 or higher, you may don or put away a quickdraw shield as a swift action combined with a regular move. If you have the Two-Weapon Fighting feat, you can draw a light or one-handed weapon with one hand and a quickdraw shield with the other in the time it would normally take you to draw one weapon. If you have the Quick Draw feat, you may don or put away a quickdraw shield as a free action.",
+    "cost": 53,
+    "slot": "1-hand",
+    "damage": "1d3",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "damageType": [
+      "B"
+    ],
+    "bonus": 1,
+    "maxDex": null,
+    "armorPenalty": -1,
+    "arcaneFailure": 5,
+    "weight": 6,
+    "tags": [
+      "light",
+      "wooden",
+      "shield",
+      "quickdraw",
+      "martial",
+      "light",
+      "melee"
+    ],
+    "type": "shield",
+    "Source": "Advanced Players Guide"
+  },
+  {
+    "name": "Shield, light steel",
+    "flavor": "You strap a shield to your forearm and grip it with your hand. A light shield's weight lets you carry other items in that hand, although you cannot use weapons with it.",
+    "text": "If you use your shield as a weapon, you lose its Armor Class bonus until your next turn. An enhancement bonus on a shield does not improve the effectiveness of a shield bash made with it, but the shield can be made into a magic weapon in its own right.",
+    "cost": 9,
+    "slot": "1-hand",
+    "damage": "1d3",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "damageType": [
+      "B"
+    ],
+    "bonus": 1,
+    "maxDex": null,
+    "armorPenalty": -1,
+    "arcaneFailure": 5,
+    "weight": 6,
+    "tags": [
+      "light",
+      "steel",
+      "shield",
+      "martial",
+      "light",
+      "melee"
+    ],
+    "type": "shield",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Shield, light steel (quickdraw)",
+    "flavor": "This light shield is specially crafted with a series of straps to allow a character proficient in shields to ready or stow it on his or her back quickly and easily.",
+    "text": "<b>Benefit</b>: If you have a base attack bonus of +1 or higher, you may don or put away a quickdraw shield as a swift action combined with a regular move. If you have the Two-Weapon Fighting feat, you can draw a light or one-handed weapon with one hand and a quickdraw shield with the other in the time it would normally take you to draw one weapon. If you have the Quick Draw feat, you may don or put away a quickdraw shield as a free action.",
+    "cost": 59,
+    "slot": "1-hand",
+    "damage": "1d3",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "damageType": [
+      "B"
+    ],
+    "bonus": 1,
+    "maxDex": null,
+    "armorPenalty": -1,
+    "arcaneFailure": 5,
+    "weight": 7,
+    "tags": [
+      "light",
+      "steel",
+      "shield",
+      "quickdraw",
+      "martial",
+      "light",
+      "melee"
+    ],
+    "type": "shield",
+    "Source": "Advanced Players Guide"
+  },
+  {
+    "name": "Shield, heavy wooden",
+    "flavor": "You strap a shield to your forearm and grip it with your hand. A heavy shield is so heavy that you can't use your shield hand for anything else.",
+    "text": "If you use your shield as a weapon, you lose its Armor Class bonus until your next turn. An enhancement bonus on a shield does not improve the effectiveness of a shield bash made with it, but the shield can be made into a magic weapon in its own right.",
+    "cost": 7,
+    "slot": "1-hand",
+    "damage": "1d4",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "damageType": [
+      "B"
+    ],
+    "bonus": 2,
+    "maxDex": null,
+    "armorPenalty": -2,
+    "arcaneFailure": 15,
+    "weight": 10,
+    "tags": [
+      "heavy",
+      "wooden",
+      "shield",
+      "martial",
+      "one-handed",
+      "melee"
+    ],
+    "type": "shield",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Shield, heavy steel",
+    "flavor": "You strap a shield to your forearm and grip it with your hand. A heavy shield is so heavy that you can't use your shield hand for anything else.",
+    "text": "If you use your shield as a weapon, you lose its Armor Class bonus until your next turn. An enhancement bonus on a shield does not improve the effectiveness of a shield bash made with it, but the shield can be made into a magic weapon in its own right.",
+    "cost": 20,
+    "slot": "1-hand",
+    "damage": "1d4",
+    "crit": {
+      "range": "20",
+      "multiplier": 2
+    },
+    "damageType": [
+      "B"
+    ],
+    "bonus": 2,
+    "maxDex": null,
+    "armorPenalty": -2,
+    "arcaneFailure": 15,
+    "weight": 15,
+    "tags": [
+      "heavy",
+      "steel",
+      "shield",
+      "martial",
+      "one-handed",
+      "melee"
+    ],
+    "type": "shield",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  },
+  {
+    "name": "Shield, Tower",
+    "flavor": "This massive wooden shield is nearly as tall as you are.",
+    "text": "<b>Benefit</b>: In most situations, a tower shield provides the indicated shield bonus to your Armor Class. As a standard action, however, you can use a tower shield to grant you total cover until the beginning of your next turn. When using a tower shield in this way, you must choose one edge of your space. That edge is treated as a solid wall for attacks targeting you only. You gain total cover for attacks that pass through this edge and no cover for attacks that do not pass through this edge (see Combat). The shield does not, however, provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. You cannot bash with a tower shield, nor can you use your shield hand for anything else.<br><br>When employing a tower shield in combat, you take a –2 penalty on attack rolls because of the shield's encumbrance.",
+    "cost": 30,
+    "slot": "1-hand",
+    "damage": null,
+    "crit": null,
+    "damageType": null,
+    "bonus": 4,
+    "maxDex": 2,
+    "armorPenalty": -10,
+    "arcaneFailure": 50,
+    "weight": 45,
+    "tags": [
+      "tower",
+      "shield"
+    ],
+    "type": "shield",
+    "source": "Pathfinder Roleplaying Game: Core Rulebook"
+  }
+]

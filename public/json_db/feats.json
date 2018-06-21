@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Acrobatic",
+    "flavor": "",
+    "text": "You are skilled at leaping, jumping, and flying.<br><b>Benefit:</b> You get a +2 bonus on all Acrobatics and Fly skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.",
+    "formula": {
+      "skills": {
+        "acrobatics": {
+          "add": {
+            "type": "feat (acrobatic)",
+            "value": "( largerEq( skills.acrobatics.ranks, 10 ) * 2 ) + 2"
+          }
+        },
+        "fly": {
+          "add": {
+            "type": "feat (acrobatic)",
+            "value": "( largerEq( skills.fly.ranks, 10 ) * 2 ) + 2"
+          }
+        }
+      }
+    },
+    "tags": [
+      "general",
+      "pfs"
+    ]
+  },
+  {
+    "name": "Point-Blank Shot",
+    "flavor": "You are especially accurate when making ranged attacks against close targets.",
+    "text": "You get a +1 bonus on attack and damage rolls with ranged weapons at ranges of up to 30 feet.",
+    "formula": {},
+    "tags": [
+      "general",
+      "combat",
+      "pfs"
+    ]
+  },
+  {
+    "name": "Power Attack",
+    "text": "You can choose to take a -1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (-50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by -1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.",
+    "prereqs": [
+      "largerEq(scores.strength.value(), 13)",
+      "largerEq([\"base attack bonus\"].value(), 1)"
+    ],
+    "formula": {
+    },
+    "tags": [
+      "general",
+      "combat",
+      "pfs"
+    ]
+  },
+  {
+    "name": "Skill Focus",
+    "text": "Choose a skill. You are particularly adept at that skill.<br><br>You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.",
+    "choices": 1,
+    "status": "incomplete",
+    "options": "skills:name",
+    "selections": [],
+    "formula": {
+      "skills": {
+        "{{0}}": {
+          "add": {
+            "type": "feat (skill focus)",
+            "value": "( largerEq( skills.{{0}}.ranks, 10 ) * 3 ) + 3"
+          }
+        }
+      }
+    },
+    "tags": [
+      "general",
+      "pfs"
+    ]
+  }
+]

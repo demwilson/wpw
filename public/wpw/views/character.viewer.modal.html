@@ -1,0 +1,49 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">{{modalType}} Details</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="modal-body">
+        <h2 style="margin-top: 0;">{{item.name}}</h2>
+        <div ng-if="item.flavor">
+            <h3>Flavor Text</h3>
+            <p style="font-style: italic;" ng-bind-html="item.flavor"></p>
+        </div>
+        <div ng-if="item.text">
+            <h3>Description</h3>
+            <p ng-bind-html="item.text"></p>
+        </div>
+        <div ng-if="item.choices && item.choices > 0">
+            <div uib-alert ng-class="'alert-' + (item.selections.length === 0 ? 'warning' : 'success')">You must make
+                {{item.choices}} selection{{item.choices > 1 ? 's' : ''}}.
+            </div>
+            <p class="bold">Options:</p>
+            <div>
+                <a class="btn aew-qualities" ng-class="isSelectedOption(option) ? 'btn-success' : 'btn-default'"
+                   ng-repeat="option in item.options" ng-click="updateSelection($index)">{{option | capitalize}}</a>
+            </div>
+            <div class="qualityDetails">
+                <p class="bold">
+                    Current Selection{{item.choices > 1 ? 's' : ''}}:
+                </p>
+            <span ng-repeat="selection in item.selections">{{selection | capitalize}}<span
+                    ng-if="!$last">, </span></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <label style="float: left;" ng-if="item.source">Source: {{item.source}} <span
+            ng-if="item.type">({{item.type}})</span>
+    </label>
+    <button class="btn btn-default aew-qualities" type="button" ng-click="closeViewer()">Close</button>
+    <button ng-if="fromCharacter === true && item.choices" class="btn btn-primary aew-qualities"
+            ng-class="item.choices && item.selections.length < item.choices ? 'disabled' : ''"
+            type="button" ng-click="saveChanges(item)">Save</button>
+    <button ng-if="fromCharacter === false" class="btn btn-primary"
+            ng-class="item.choices && item.selections.length < item.choices ? 'disabled' : ''"
+            type="button" ng-click="addItemToCharacter(item)">Select {{modalType}}
+    </button>
+    <button ng-if="fromCharacter === true && !item.source && character.canRemoveFeatByName(item.name)" class="btn btn-primary"
+            type="button" ng-click="removeItemFromCharacter(item)">Remove {{modalType}}
+    </button>
+</div>

@@ -1,0 +1,13 @@
+<div class="col-sm-4 col-md-3 action-card">
+    <div class="card-outer {{'label-'+card.getTag()}}" ng-class="{'ignored-card': card.hide}">
+        <span class="glyphicon glyphicon-remove-circle close-button" title="Hide Card" ng-click="card.hide=!card.hide"></span>
+        <div class="card-inner">
+            <h3 class="card-header text-center">{{card.getTitle()}}</h3>
+            <p class="card-text">{{card.getText()}}</p>
+            <p class="text-center">
+                <a href="javascript:;" class="btn {{'btn-'+card.getTag()}}" role="button"
+                   ng-click="openSection(card.getSection())">{{card.getButtonText()}}</a>
+            </p>
+        </div>
+    </div>
+</div>

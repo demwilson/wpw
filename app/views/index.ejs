@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Alexander Wilson">
+
+    <title data-ng-model="title"></title>
+
+    <!--link href="css/mean.css" rel="stylesheet"-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/js/math.dev.js"></script>
+    <script type="text/javascript" src="/js/jquery/dist/jquery.js"></script>
+
+    <script type="text/javascript" src="/js/angular/angular.js"></script>
+    <script type="text/javascript" src="/js/angular-sanitize/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="/js/angular-animate/angular-animate.min.js"></script>
+    <script type="text/javascript" src="/js/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="/js/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="/js/angular-ui/build/angular-ui.min.js"></script>
+    <script type="text/javascript" src="/js/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <script type="text/javascript" src="/wpw/feats.client.module.js"></script>
+    <script type="text/javascript" src="/wpw/controllers/feats.client.controller.js"></script>
+    <script type="text/javascript" src="/wpw/services/feats.client.service.js"></script>
+    <script type="text/javascript" src="/wpw/routes/feats.client.routes.js"></script>
+
+    <script type="text/javascript" src="/useri/users.client.module.js"></script>
+    <script type="text/javascript" src="/useri/controllers/users.client.controller.js"></script>
+    <script type="text/javascript" src="/useri/services/authentication.client.service.js"></script>
+
+    <script type="text/javascript" src="/wpw/character.module.js"></script>
+    <script type="text/javascript" src="/wpw/controllers/character.controller.js"></script>
+    <script type="text/javascript" src="/wpw/services/character.service.js"></script>
+    <script type="text/javascript" src="/wpw/routes/character.routes.js"></script>
+    <script type="text/javascript" src="/wpw/filters/character.filter.js"></script>
+    <script type="text/javascript" src="/wpw/directives/character.directive.js"></script>
+
+    <script type="text/javascript" src="/js/application.js"></script>
+</head>
+<body ng-app="mean">
+<div data-ng-controller="userController">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">The Crimson Path</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="page-scroll" data-ng-show="!authentication.user">
+                        <a href="/login">Login</a>
+                    </li>
+                    <li class="page-scroll" data-ng-show="!authentication.user">
+                        <a href="/register">Register</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/#!/feats">Feats</a>
+                    </li>
+                    <li class="page-scroll" data-ng-show="authentication.user" data-ng-click="display = 'create'">
+                        <a href="/#!/feats/create">Create Feat</a>
+                    </li>
+                    <li class="page-scroll" data-ng-show="authentication.user" data-ng-click="display = 'list'">
+                        <a href="/logout">Hello <span data-ng-bind="authentication.user.username" data-ng-show="authentication.user"></span>, Logout?</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <section ng-view class="main-section">
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.user = <%- user || 'null' %>;
+</script>
+</body>
+</html>

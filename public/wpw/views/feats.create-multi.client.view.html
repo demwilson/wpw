@@ -1,0 +1,14 @@
+<section class="container" id="feats_createMultiFeats" data-ng-controller="featsCreateMultiController">
+    <h1>Multi-Feat</h1>
+    <div data-ng-show="error">
+        <strong data-ng-bind="error"></strong>
+    </div>
+    <form class="form-signin" data-ng-submit="createMultiFeats()" novalidate>
+        <div class="labelAndElement">
+            <textarea style="width: 500px; height: 300px;" data-ng-model="featData" id="featData" required autofocus></textarea>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-lg btn-primary btn-block">Process Feats</button>
+        </div>
+    </form>
+</section>

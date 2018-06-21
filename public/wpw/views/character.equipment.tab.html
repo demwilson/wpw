@@ -1,0 +1,81 @@
+<div>
+    <h4>Items ( {{equipment.totalFiltered}} of {{equipment.totalCount}} )</h4>
+    <div class="qualityDetails" ng-init="getEquipment()">
+        <uib-tabset active="active">
+            <uib-tab index="1" heading="Weapons" ng-click="updateCurrentTab('weapon')">
+                <div class="main">
+                    <ul uib-pagination total-items="equipment.totalFiltered" ng-model="equipment.currentPage.weapon"
+                        max-size="equipment.pagerButtonsToShow" class="pagination-sm" boundary-link-numbers="true"
+                        items-per-page="equipment.itemsPerPage"></ul>
+                    <table class="table table-striped table-condensed">
+                        <thead>
+                        <tr>
+                            <th style="width: 150px;">Name</th>
+                            <th class="text-center">Cost</th>
+                            <th class="text-center">Damage</th>
+                            <th class="text-center">Critical</th>
+                            <th class="text-center">Range</th>
+                            <th class="text-center">Weight</th>
+                            <th class="text-center">Type</th>
+                            <th class="text-center">Special</th>
+                            <th class="text-center"></th>
+                        </tr>
+                        </thead>
+                        <tr ng-repeat="item in equipment.filtered | startFrom:(equipment.currentPage.weapon-1)*equipment.itemsPerPage | limitTo:equipment.itemsPerPage">
+                            <!--td><a href="javascript:;" ng-click="viewItem(item)">{{item.name | capitalize}}</a></td-->
+                            <td>{{item.name | capitalize}}</td>
+                            <td class="text-center">{{item.cost | parseItemCost | itemHasProperty}}</td>
+                            <td class="text-center">{{item.damage | itemHasProperty}}</td>
+                            <td class="text-center">{{item.crit.range | itemHasProperty}}/x{{item.crit.multiplier |
+                                itemHasProperty}}
+                            </td>
+                            <td class="text-center">{{item.range | parseItemRange | itemHasProperty}}</td>
+                            <td class="text-center">{{item.weight | parseItemWeight | itemHasProperty}}</td>
+                            <td class="text-center">{{item.damageType.join(', ') | itemHasProperty}}</td>
+                            <td class="text-center">{{item.special.join(', ') | itemHasProperty}}</td>
+                            <td class="text-center">
+                                <button type="button" class="btn btn-success" ng-click="addItem(item)">Add Item</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </uib-tab>
+            <uib-tab index="2" heading="Armor" ng-click="updateCurrentTab('armor')">
+                <div class="main">
+                    <ul uib-pagination total-items="equipment.totalFiltered" ng-model="equipment.currentPage.armor"
+                        max-size="equipment.pagerButtonsToShow" class="pagination-sm" boundary-link-numbers="true"
+                        items-per-page="equipment.itemsPerPage"></ul>
+                    <table class="table table-striped table-condensed">
+                        <thead>
+                        <tr>
+                            <th style="width: 150px;">Name</th>
+                            <th class="text-center">Cost</th>
+                            <th class="text-center">Bonus</th>
+                            <th class="text-center">Max Dex</th>
+                            <th class="text-center">Armor Check<br>Penalty</th>
+                            <th class="text-center">Arcane Spell<br>Failure Chance</th>
+                            <th class="text-center">Speed</th>
+                            <th class="text-center">Weight</th>
+                            <th class="text-center"></th>
+                        </tr>
+                        </thead>
+                        <tr ng-repeat="item in equipment.filtered | startFrom:(equipment.currentPage.armor-1)*equipment.itemsPerPage | limitTo:equipment.itemsPerPage">
+                            <!--td><a href="javascript:;" ng-click="viewItem(item)">{{item.name | capitalize}}</a></td-->
+                            <td>{{item.name | capitalize}}</td>
+                            <td class="text-center">{{item.cost | parseItemCost | itemHasProperty}}</td>
+                            <td class="text-center">{{item.bonus | itemHasProperty}}</td>
+                            <td class="text-center">{{item.maxDex | itemHasProperty}}</td>
+                            <td class="text-center">{{item.armorPenalty | itemHasProperty}}</td>
+                            <td class="text-center">{{item.arcaneFailure | itemHasProperty}}%</td>
+                            <td class="text-center">{{item.speed | itemHasProperty}}</td>
+                            <td class="text-center">{{item.weight | parseItemWeight | itemHasProperty}}</td>
+                            <td class="text-center">
+                                <button type="button" class="btn btn-success" ng-click="addItem(item)">Add Item</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </uib-tab>
+        </uib-tabset>
+    </div>
+</div>

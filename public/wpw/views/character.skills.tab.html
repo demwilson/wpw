@@ -1,0 +1,68 @@
+<div ng-if="true || character.getCharacterLevel() > 0">
+    <div class="row major-section">
+        <div class="col-sm-12 col-md-3">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <input type="checkbox" ng-click="options.showClassSkillsOnly = !options.showClassSkillsOnly"
+                           aria-label="class-skills-only">
+                </span>
+                <span class="form-control" id="class-skills-only">Class Skills Only</span>
+            </div>
+        </div>
+        <label class="col-sm-4 col-md-3">Max Ranks:</label>
+        <label class="col-sm-2 col-md-1">{{character.getMaxTotalRanks()}}</label>
+        <label class="col-sm-4 col-md-3"
+               ng-class="{'warning': character.getCurrentRanks() > character.getMaxTotalRanks()}">Total
+            Ranks: </label>
+        <label class="col-sm-2 col-md-1"
+               ng-class="{'warning': character.getCurrentRanks() > character.getMaxTotalRanks()}">{{character.getCurrentRanks()}}</label>
+    </div>
+    <div class="col-md-8">
+        <div>
+            <table class="table table-striped table-condensed">
+                <thead>
+                <tr>
+                    <th style="width: 100px;">Skill</th>
+                    <th class="text-center">Total</th>
+                    <th class="text-center">Mod</th>
+                    <th class="text-center">Ranks</th>
+                </tr>
+                </thead>
+                <tr ng-if="shouldOptions(skill)"
+                    ng-repeat="skill in character.skills | ignoreFunctions:skill">
+                    <td>{{skill.name | capitalize}}</td>
+                    <td class="text-center">
+                        <a tabindex="0" class="btn btn-default aew-minWidth"
+                           uib-popover-template="'/wpw/views/character.skills.popover.html'"
+                           popover-trigger="'focus'" popover-placement="right">
+                            {{skill.value('all') | plusSign}}
+                        </a>
+                    </td>
+                    <td class="text-center">{{skill.value('modifier') | plusSign}}</td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-default aew-btn-ranks" aria-label="Left Align"
+                                ng-class="{'disabled': skill.ranks === 0}"
+                                ng-click="modifyRank(skill, 'zero', character)">
+                            <span>0</span>
+                        </button>
+                        <button type="button" class="btn btn-default aew-btn-ranks" aria-label="Right Align"
+                                ng-class="{'disabled': skill.ranks === 0}"
+                                ng-click="modifyRank(skill, 'decrease', character)">
+                            <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+                        </button>
+                        <label class="form-control" style="display: inline-block; width: auto;">{{skill.ranks}}</label>
+                        <button type="button" class="btn btn-default aew-btn-ranks" aria-label="Left Align"
+                                ng-click="modifyRank(skill, 'increase', character)">
+                            <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default aew-btn-ranks" aria-label="Left Align"
+                                ng-class="{'disabled': skill.ranks >= character.getMaxRanksPerSkill()}"
+                                ng-click="modifyRank(skill, 'max', character)">
+                            <span class="glyphicon glyphicon-fast-forward" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

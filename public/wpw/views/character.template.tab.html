@@ -1,0 +1,37 @@
+<div>
+    <a ng-if="character.template === null" class="btn btn-primary" ng-click="openModal('race')">Add Template</a>
+</div>
+<div ng-if="character.race">
+    <div class="row">
+        <div class="col-md-3 match-button-space">
+            <span class="bold">Chosen Race</span>: {{character.template.name}}
+        </div>
+        <div class="col-md-2">
+            <a ng-if="character.race !== null" class="btn btn-info" ng-click="openModal('race')">Change Race</a>
+        </div>
+    </div>
+    <p class="bold">
+        Chosen Qualities:
+    </p>
+    <a class="btn btn-default aew-qualities" ng-click="selectQuality(quality)"
+       ng-repeat="quality in character.race.qualities">{{quality.name}}<span ng-if="quality.choices">*</span></a>
+    <div class="qualityDetails" ng-if="selectedQuality !== null">
+        <p class="bold">
+            {{selectedQuality.name}}
+        </p>
+        <p>
+            {{selectedQuality.text}}
+        </p>
+        <div ng-if="selectedQuality.choices">
+            <p><span class="bold">Total Selections: </span>{{selectedQuality.choices}}</p>
+            <p><span
+                    class="bold">Selection{{selectedQuality.choices > 1 ? 's' : ''}} Made: </span><span
+                    ng-repeat="selection in selectedQuality.selections">{{selection | capitalize}}<span
+                    ng-if="!$last">, </span></span></p>
+            <div class="qualityDetails">
+                <a class="btn btn-primary" ng-click="removeSelections(selectedQuality)">Change
+                    Selection{{selectedQuality.choices > 1 ? 's' : ''}}</a>
+            </div>
+        </div>
+    </div>
+</div>
